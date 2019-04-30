@@ -36,4 +36,16 @@ class User extends Authenticatable {
  protected $casts = [
   'email_verified_at' => 'datetime',
  ];
+
+
+ // - relations
+
+ /**
+  * A user may have one business
+  *
+  * @return \Illuminate\Database\Eloquent\Relations\HasOne
+  */
+ public function business() {
+  return $this->hasOne( Business::class, 'user_id' );
+ }
 }
