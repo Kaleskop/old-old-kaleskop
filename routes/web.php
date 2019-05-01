@@ -15,6 +15,8 @@ Auth::routes();
 
 Route::get( '/', 'WebsiteController@homepage' )->name( 'website.homepage' );
 
+Route::post( '/stripe/webhook', '\Laravel\Cashier\Http\Controllers\WebhookController@handleWebhook' );
+
 // - account
 Route::get( '/account', 'AccountController@index' )->name( 'account.index' );
 Route::get( '/account/business', 'AccountController@business' )->name( 'account.business' );
