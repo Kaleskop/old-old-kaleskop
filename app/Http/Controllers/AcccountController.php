@@ -18,4 +18,8 @@ class AccountController extends Controller {
  public function index() {
   $user = Auth::user();
  }
+
+ public function business() {
+  $user = Auth::user();
+ }
 }
