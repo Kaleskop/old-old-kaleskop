@@ -46,3 +46,10 @@ Route::get( '/advs/create', 'AdvsController@create' )->name( 'advs.create' );
 // - opineon
 Route::post( '/opineon/{subject}', 'OpineonController@express' )->name( 'opineon.express' );
 Route::post( '/opineon/{opinion}/comment', 'OpineonController@comment' )->name( 'opineon.comment' );
+
+// - brands
+Route::post( '/brands/store', 'BrandsController@store' )->name( 'brands.store' );
+Route::patch( '/brands/{brand}', 'BrandsController@update' )->name( 'brands.update' );
+Route::delete( '/brands/{brand}', 'BrandsController@destroy' )->name( 'brands.destroy' );
+Route::get( '/brands', 'BrandsController@index' )->name( 'brands.index' );
+Route::get( '/brands/create', 'BrandsController@create' )->name( 'brands.create' );
