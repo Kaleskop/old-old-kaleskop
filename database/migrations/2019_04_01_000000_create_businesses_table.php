@@ -15,6 +15,7 @@ class CreateBusinessesTable extends Migration {
   Schema::create( 'businesses', function( Blueprint $table ) {
    $table->bigIncrements( 'id' );
    $table->unsignedInteger( 'user_id' )->index();
+   $table->string( 'folder' )->nullable();
    $table->string( 'country' );
    $table->string( 'name' );
    $table->string( 'email' )->unique()->index();
