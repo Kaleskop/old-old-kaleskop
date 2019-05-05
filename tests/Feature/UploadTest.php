@@ -16,6 +16,8 @@ class UploadTest extends TestCase {
  use RefreshDatabase;
 
  public function test_AuthUser_BusinessRegistrationAssignUUID_HasUUID() {
+  Storage::fake( 's3' );
+
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->make();
