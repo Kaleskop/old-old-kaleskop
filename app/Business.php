@@ -68,6 +68,15 @@ class Business extends Model {
   return $this->hasMany( Brand::class, 'business_id' );
  }
 
+ /**
+  * A business may have many videos
+  *
+  * @return \Illuminate\Database\Eloquent\Relations\HasMany
+  */
+ public function videos() {
+  return $this->hasMany( Video::class, 'business_id' );
+ }
+
 
  // - checks
 
