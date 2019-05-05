@@ -37,7 +37,12 @@ class AdvsController extends Controller {
 
  public function index() {
   $advs = Auth::user()->advs;
+
+  return view( 'layouts.wrapper', [ 'page'=>'advs.index-page' ] )
+   ->with( 'advs', $advs );
  }
 
- public function create() {}
+ public function create() {
+  return view( 'layouts.wrapper', [ 'page'=>'advs.create-page' ] );
+ }
 }
