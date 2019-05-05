@@ -53,3 +53,9 @@ Route::patch( '/brands/{brand}', 'BrandsController@update' )->name( 'brands.upda
 Route::delete( '/brands/{brand}', 'BrandsController@destroy' )->name( 'brands.destroy' );
 Route::get( '/brands', 'BrandsController@index' )->name( 'brands.index' );
 Route::get( '/brands/create', 'BrandsController@create' )->name( 'brands.create' );
+
+// - videos
+Route::post( '/videos/upload', 'VideosController@upload' )->name( 'videos.upload' );
+Route::delete( '/videos/{video}', 'VideosController@destroy' )->name( 'videos.destroy' );
+Route::get( '/videos', 'VideosController@index' )->name( 'videos.index' );
+Route::get( '/videos/create', 'VideosController@create' )->name( 'videos.create' );
