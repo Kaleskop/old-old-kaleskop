@@ -39,9 +39,11 @@ Route::get( '/plans/create', 'PlansController@create' )->name( 'plans.create' );
 
 // - advs
 Route::post( '/advs/store', 'AdvsController@store' )->name( 'advs.store' );
+Route::post( '/advs/linkTo/{adv}', 'AdvsController@linkTo' )->name( 'advs.linkTo' );
 Route::delete( '/advs/{adv}', 'AdvsController@destroy' )->name( 'advs.destroy' );
 Route::get( '/advs', 'AdvsController@index' )->name( 'advs.index' );
 Route::get( '/advs/create', 'AdvsController@create' )->name( 'advs.create' );
+Route::get( '/advs/linkTo/{adv}', 'AdvsController@manifesto' )->name( 'advs.manifesto' );
 
 // - opineon
 Route::post( '/opineon/{subject}', 'OpineonController@express' )->name( 'opineon.express' );
@@ -56,6 +58,8 @@ Route::get( '/brands/create', 'BrandsController@create' )->name( 'brands.create'
 
 // - videos
 Route::post( '/videos/upload', 'VideosController@upload' )->name( 'videos.upload' );
+Route::post( '/videos/linkTo/{video}', 'VideosController@linkTo' )->name( 'videos.linkTo' );
 Route::delete( '/videos/{video}', 'VideosController@destroy' )->name( 'videos.destroy' );
 Route::get( '/videos', 'VideosController@index' )->name( 'videos.index' );
 Route::get( '/videos/create', 'VideosController@create' )->name( 'videos.create' );
+Route::get( '/videos/linkTo/{video}', 'VideosController@manifesto' )->name( 'videos.manifesto' );
