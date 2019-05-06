@@ -46,6 +46,16 @@ class VideosController extends Controller {
   return back();
  }
 
+ public function linkTo( Request $request, Video $video ) {
+  $this->validate( $request, [
+   'advs' => [ 'required', 'array' ]
+  ] );
+
+  $video->advs()->attach( $request->advs );
+
+  return back();
+ }
+
 
  // - view actions
 
@@ -58,5 +68,13 @@ class VideosController extends Controller {
 
  public function create() {
   return view( 'layouts.wrapper', [ 'page'=>'videos.create-page' ] );
+ }
+
+ public function manifesto( Video $video ) {
+  $advs = Auth::user()->advs;
+
+  return view( 'layouts.wrapper', [ 'page'=>'videos.linkTo' ] )
+   ->with( 'video', $video )
+   ->with( 'advs', $advs );
  }
 }
