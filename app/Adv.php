@@ -48,4 +48,13 @@ class Adv extends Model {
  public function owner() {
   return $this->belongsTo( User::class, 'user_id' );
  }
+
+ /**
+  * An adv may have many videos
+  *
+  * @return \Illuminate\Database\Eloquent\Relations\belongsToMany
+  */
+ public function videos() {
+  return $this->belongsToMany( Video::class, 'manifesto', 'adv_id', 'video_id' );
+ }
 }
