@@ -57,4 +57,13 @@ class Adv extends Model {
  public function videos() {
   return $this->belongsToMany( Video::class, 'manifesto', 'adv_id', 'video_id' );
  }
+
+ /**
+  * An adv may have many brands
+  *
+  * @return \Illuminate\Database\Eloquent\Relations\belongsToMany
+  */
+ public function brands() {
+  return $this->belongsToMany( Brand::class, 'sponsor', 'adv_id', 'brand_id' );
+ }
 }

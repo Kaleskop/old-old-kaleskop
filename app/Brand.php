@@ -48,4 +48,13 @@ class Brand extends Model {
  public function owner() {
   return $this->belongsTo( Business::class, 'business_id' );
  }
+
+ /**
+  * A brand may have many advs
+  *
+  * @return \Illuminate\Database\Eloquent\Relations\belongsToMany
+  */
+ public function advs() {
+  return $this->belongsToMany( Adv::class, 'sponsor', 'brand_id', 'adv_id' );
+ }
 }
