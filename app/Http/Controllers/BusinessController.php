@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Business;
 use Auth;
+use App\Plan;
 
 class BusinessController extends Controller {
 
@@ -29,5 +30,17 @@ class BusinessController extends Controller {
 
  public function index() {
   $business = Auth::user()->business;
+
+  return view( 'layouts.wrapper', [ 'page'=>'business.index-page' ] )
+   ->with( 'business', $business );
+ }
+
+ public function subscriptions() {
+  $business = Auth::user()->business;
+  $plans = Plan::latest()->get();
+
+  return view( 'layouts.wrapper', [ 'page'=>'business.subscriptions-page' ] )
+   ->with( 'business', $business )
+   ->with( 'plans', $plans );
  }
 }

@@ -53,6 +53,15 @@ class Video extends Model {
   return $this->belongsTo( Business::class, 'business_id' );
  }
 
+ /**
+  * A video may have many advs
+  *
+  * @return \Illuminate\Database\Eloquent\Relations\belongsToMany
+  */
+ public function advs() {
+  return $this->belongsToMany( Adv::class, 'manifesto', 'video_id', 'adv_id' );
+ }
+
 
  // - helpers
 

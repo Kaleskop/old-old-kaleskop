@@ -59,7 +59,12 @@ class BrandsController extends Controller {
 
  public function index() {
   $brands = Auth::user()->business->brands()->latest()->get();
+
+  return view( 'layouts.wrapper', [ 'page'=>'brands.index-page' ] )
+   ->with( 'brands', $brands );
  }
 
- public function create() {}
+ public function create() {
+  return view( 'layouts.wrapper', [ 'page'=>'brands.create-page' ] );
+ }
 }

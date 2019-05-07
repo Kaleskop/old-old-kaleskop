@@ -100,7 +100,11 @@ class PlansController extends Controller {
  public function index() {
   $plans = Plan::latest()->get();
 
+  return view( 'layouts.wrapper', [ 'page'=>'plans.index-page' ] )
+   ->with( 'plans', $plans );
  }
 
- public function create() {}
+ public function create() {
+  return view( 'layouts.wrapper', [ 'page'=>'plans.create-page' ] );
+ }
 }

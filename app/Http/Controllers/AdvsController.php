@@ -32,12 +32,35 @@ class AdvsController extends Controller {
   return back();
  }
 
+ public function linkTo( Request $request, Adv $adv ) {
+  $this->validate( $request, [
+   'videos' => [ 'required', 'array' ]
+  ] );
+
+  $adv->videos()->attach( $request->videos );
+
+  return back();
+ }
+
 
  // - view actions
 
  public function index() {
   $advs = Auth::user()->advs;
+
+  return view( 'layouts.wrapper', [ 'page'=>'advs.index-page' ] )
+   ->with( 'advs', $advs );
  }
 
- public function create() {}
+ public function create() {
+  return view( 'layouts.wrapper', [ 'page'=>'advs.create-page' ] );
+ }
+
+ public function manifesto( Adv $adv ) {
+  $videos = Auth::user()->business->videos()->latest()->get();
+
+  return view( 'layouts.wrapper', [ 'page'=>'advs.linkTo' ] )
+   ->with( 'adv', $adv )
+   ->with( 'videos', $videos );
+ }
 }
