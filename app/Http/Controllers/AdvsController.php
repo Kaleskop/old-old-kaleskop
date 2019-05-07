@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Adv;
-use App\Auth;
+use Auth;
 
 class AdvsController extends Controller {
 
