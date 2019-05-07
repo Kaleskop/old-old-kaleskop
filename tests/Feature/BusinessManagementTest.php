@@ -8,12 +8,15 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 use App\Business;
 use App\User;
+use Storage;
 
 class BusinessManagementTest extends TestCase {
 
  use RefreshDatabase;
 
  public function test_AuthUser_CanRegisterBusiness_DatabaseHasBusiness() {
+  Storage::fake( 's3' );
+
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->make();
@@ -24,6 +27,8 @@ class BusinessManagementTest extends TestCase {
  }
 
  public function test_Business_CanAccessBusinessManagementPage_AssertSuccessful() {
+  Storage::fake( 's3' );
+
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->create( [ 'user_id'=>$user->id ]);

@@ -9,12 +9,15 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use App\User;
 use App\Business;
 use App\Adv;
+use Storage;
 
 class AdvertisementTest extends TestCase {
 
  use RefreshDatabase;
 
  public function test_User_EndpointClickUpdateAdvClicks_HasOneMoreClick() {
+  Storage::fake( 's3' );
+
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->create( [ 'user_id'=>$user->id ] );
@@ -26,6 +29,8 @@ class AdvertisementTest extends TestCase {
  }
 
  public function test_SubscribedUser_CanInsertAdv_HasAdv() {
+  Storage::fake( 's3' );
+
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->create( [ 'user_id'=>$user->id ] );
@@ -39,6 +44,8 @@ class AdvertisementTest extends TestCase {
  }
 
  public function test_SubscribedUser_CanDeleteAdv_IsSoftDeleted() {
+  Storage::fake( 's3' );
+
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->create( [ 'user_id'=>$user->id ] );

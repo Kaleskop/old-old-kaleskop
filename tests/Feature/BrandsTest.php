@@ -9,6 +9,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use App\Brand;
 use App\User;
 use App\Business;
+use Storage;
 
 class BrandsTest extends TestCase {
 
@@ -25,6 +26,8 @@ class BrandsTest extends TestCase {
  }
 
  public function test_BusinessUser_CanInsertABrand_HasBrand() {
+  Storage::fake( 's3' );
+
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->create( [ 'user_id'=>$user->id ] );
@@ -36,6 +39,8 @@ class BrandsTest extends TestCase {
  }
 
  public function test_BusinessUser_CanEditBrandData_HasBrand() {
+  Storage::fake( 's3' );
+
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->create( [ 'user_id'=>$user->id ] );
@@ -49,6 +54,8 @@ class BrandsTest extends TestCase {
  }
 
  public function test_BusinessUser_CanDeleteABrand_IsSoftDeleted() {
+  Storage::fake( 's3' );
+
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->create( [ 'user_id'=>$user->id ] );

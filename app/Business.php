@@ -3,8 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 use Laravel\Cashier\Billable;
+use Carbon\Carbon;
+use Storage;
 
 class Business extends Model {
 
@@ -23,7 +26,7 @@ class Business extends Model {
   * @var array
   */
  protected $fillable = [
-  'country', 'name', 'email', 'vat', 'address_line1', 'city', 'cap'
+  'folder', 'country', 'name', 'email', 'vat', 'address_line1', 'city', 'cap'
  ];
 
 
@@ -33,9 +36,16 @@ class Business extends Model {
  public static function boot() {
   parent::boot();
 
+  static::creating( function( $model ) {
+   $model->folder = (string) Str::orderedUuid();
+  } );
+
   static::created( function( $model ) {
    // - create the stripe customer before any possible error
    $model->createStripeCustomer();
+
+   // - create folder on storage
+   Storage::disk( 's3' )->makeDirectory( $model->folder );
   } );
  }
 
@@ -65,6 +75,15 @@ class Business extends Model {
   */
  public function brands() {
   return $this->hasMany( Brand::class, 'business_id' );
+ }
+
+ /**
+  * A business may have many videos
+  *
+  * @return \Illuminate\Database\Eloquent\Relations\HasMany
+  */
+ public function videos() {
+  return $this->hasMany( Video::class, 'business_id' );
  }
 
 

@@ -9,6 +9,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use App\User;
 use App\Plan;
 use App\Business;
+use Storage;
 
 class SubscriptionsTest extends TestCase {
 
@@ -47,6 +48,8 @@ class SubscriptionsTest extends TestCase {
  }
 
  public function test_AuthUser_BusinessRegistrationCreateStripeCustomer_NotNullStripeId() {
+  Storage::fake( 's3' );
+
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->make();
@@ -58,6 +61,8 @@ class SubscriptionsTest extends TestCase {
  }
 
  public function test_BusinessUser_CanSubscribeToPlan_HasSubscription() {
+  Storage::fake( 's3' );
+
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->create( [ 'user_id'=>$user->id ] );
@@ -68,6 +73,8 @@ class SubscriptionsTest extends TestCase {
  }
 
  public function test_SubscribedUser_CanSwapToPlan_HasSubscription() {
+  Storage::fake( 's3' );
+
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->create( [ 'user_id'=>$user->id ] );
@@ -85,6 +92,8 @@ class SubscriptionsTest extends TestCase {
  }
 
  public function test_SubscribedUser_CanCancelSubscription_HasSubscription() {
+  Storage::fake( 's3' );
+
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->create( [ 'user_id'=>$user->id ] );
