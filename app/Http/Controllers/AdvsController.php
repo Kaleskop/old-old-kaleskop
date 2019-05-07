@@ -42,6 +42,16 @@ class AdvsController extends Controller {
   return back();
  }
 
+ public function sponsorTo( Request $request, Adv $adv ) {
+  $this->validate( $request, [
+   'brands' => [ 'required', 'array' ]
+  ] );
+
+  $adv->brands()->attach( $request->brands );
+
+  return back();
+ }
+
 
  // - view actions
 
@@ -62,5 +72,13 @@ class AdvsController extends Controller {
   return view( 'layouts.wrapper', [ 'page'=>'advs.linkTo' ] )
    ->with( 'adv', $adv )
    ->with( 'videos', $videos );
+ }
+
+ public function sponsor( Adv $adv ) {
+  $brands = Auth::user()->brands()->latest()->get();
+
+  return view( 'layouts.wrapper', [ 'page'=>'advs.sponsor-page' ] )
+   ->with( 'adv', $adv )
+   ->with( 'brands', $brands );
  }
 }
