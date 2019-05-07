@@ -14,6 +14,7 @@
 Auth::routes();
 
 Route::get( '/', 'WebsiteController@homepage' )->name( 'website.homepage' );
+Route::get( '/k/{adv}', 'WebsiteController@endpoint' )->name( 'website.endpoint' );
 
 Route::post( '/stripe/webhook', '\Laravel\Cashier\Http\Controllers\WebhookController@handleWebhook' );
 
@@ -35,3 +36,9 @@ Route::delete( '/plans/{plan}', 'PlansController@destroy' )->name( 'plans.destro
 Route::delete( '/plans/{plan}/cancel', 'PlansController@cancel' )->name( 'plans.cancel' );
 Route::get( '/plans', 'PlansController@index' )->name( 'plans.index' );
 Route::get( '/plans/create', 'PlansController@create' )->name( 'plans.create' );
+
+// - advs
+Route::post( '/advs/store', 'AdvsController@store' )->name( 'advs.store' );
+Route::delete( '/advs/{adv}', 'AdvsController@destroy' )->name( 'advs.destroy' );
+Route::get( '/advs', 'AdvsController@index' )->name( 'advs.index' );
+Route::get( '/advs/create', 'AdvsController@create' )->name( 'advs.create' );
