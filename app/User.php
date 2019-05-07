@@ -49,6 +49,15 @@ class User extends Authenticatable {
   return $this->hasOne( Business::class, 'user_id' );
  }
 
+ /**
+  * A user may have many advs
+  *
+  * @return \Illuminate\Database\Eloquent\Relations\HasMany
+  */
+ public function advs() {
+  return $this->hasMany( Adv::class, 'user_id' );
+ }
+
 
  // - checks
 
