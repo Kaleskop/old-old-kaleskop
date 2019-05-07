@@ -11,4 +11,9 @@
 |
 */
 
+Auth::routes();
+
 Route::get( '/', 'WebsiteController@homepage' )->name( 'website.homepage' );
+
+// - account
+Route::get( '/account', 'AccountController@index' )->name( 'account.index' );
