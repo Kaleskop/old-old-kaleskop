@@ -10,6 +10,11 @@ use App\Plan;
 
 class BusinessController extends Controller {
 
+ public function __construct() {
+  $this->middleware( 'auth' );
+  $this->middleware( 'business' )->only( 'index' );
+ }
+
  public function store( Request $request ) {
   $this->validate( $request, [
    'country'       => [ 'required', 'string', 'max:255' ],
