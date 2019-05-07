@@ -58,6 +58,15 @@ class Business extends Model {
   return $this->belongsTo( User::class, 'user_id' );
  }
 
+ /**
+  * A business may have many brands
+  *
+  * @return \Illuminate\Database\Eloquent\Relations\HasMany
+  */
+ public function brands() {
+  return $this->hasMany( Brand::class, 'business_id' );
+ }
+
 
  // - checks
 
