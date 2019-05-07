@@ -9,5 +9,12 @@ class DatabaseSeeder extends Seeder {
   *
   * @return void
   */
- public function run() {}
+ public function run() {
+  $this->call( UserSeeder::class );
+  $this->call( BusinessSeeder::class );
+  $this->call( AdvSeeder::class );
+  $this->call( BrandSeeder::class );
+  $this->call( VideoSeeder::class );
+  $this->call( PlanSeeder::class );
+ }
 }
