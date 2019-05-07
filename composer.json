@@ -12,7 +12,8 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
-        "laravel/cashier": "^9.3.0"
+        "laravel/cashier": "^9.3.0",
+        "agpretto/opineon": "dev-master"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

@@ -6,10 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 use App\Traits\HasClicks;
+use Agpretto\Opineon\Traits\HasOpinions;
 
 class Adv extends Model {
 
- use SoftDeletes, HasClicks;
+ use SoftDeletes, HasClicks, HasOpinions;
 
  /**
   * The table associated with the model.

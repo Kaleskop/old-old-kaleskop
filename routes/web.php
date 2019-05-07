@@ -42,3 +42,7 @@ Route::post( '/advs/store', 'AdvsController@store' )->name( 'advs.store' );
 Route::delete( '/advs/{adv}', 'AdvsController@destroy' )->name( 'advs.destroy' );
 Route::get( '/advs', 'AdvsController@index' )->name( 'advs.index' );
 Route::get( '/advs/create', 'AdvsController@create' )->name( 'advs.create' );
+
+// - opineon
+Route::post( '/opineon/{subject}', 'OpineonController@express' )->name( 'opineon.express' );
+Route::post( '/opineon/{opinion}/comment', 'OpineonController@comment' )->name( 'opineon.comment' );

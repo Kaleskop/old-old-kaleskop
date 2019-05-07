@@ -6,9 +6,12 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+use Agpretto\Opineon\Traits\Opineon;
+use Agpretto\Opineon\Traits\CanComment;
+
 class User extends Authenticatable {
 
- use Notifiable;
+ use Notifiable, Opineon, CanComment;
 
  /**
   * The attributes that are mass assignable.
