@@ -73,7 +73,7 @@ class VideosController extends Controller {
  public function manifesto( Video $video ) {
   $advs = Auth::user()->advs;
 
-  return view( 'layouts.wrapper', [ 'page'=>'videos.linkTo' ] )
+  return view( 'layouts.wrapper', [ 'page'=>'videos.manifesto-page' ] )
    ->with( 'video', $video )
    ->with( 'advs', $advs );
  }

@@ -81,7 +81,7 @@ class BrandsController extends Controller {
  public function sponsor( Brand $brand ) {
   $advs = Auth::user()->advs;
 
-  return view( 'layouts.wrapper', [ 'page'=>'brands.linkTo-page' ] )
+  return view( 'layouts.wrapper', [ 'page'=>'brands.sponsor-page' ] )
    ->with( 'brand', $brand )
    ->with( 'advs', $advs );
  }

@@ -1,4 +1,4 @@
-<form method="POST" action="{{ route( 'advs.linkTo', $adv ) }}">
+<form method="POST" action="{{ route( 'advs.manifestoTo', $adv ) }}">
  @csrf
 
  <p>{{ $video->title }}</p>

@@ -32,7 +32,7 @@ class AdvsController extends Controller {
   return back();
  }
 
- public function linkTo( Request $request, Adv $adv ) {
+ public function manifestoTo( Request $request, Adv $adv ) {
   $this->validate( $request, [
    'videos' => [ 'required', 'array' ]
   ] );
@@ -69,7 +69,7 @@ class AdvsController extends Controller {
  public function manifesto( Adv $adv ) {
   $videos = Auth::user()->business->videos()->latest()->get();
 
-  return view( 'layouts.wrapper', [ 'page'=>'advs.linkTo' ] )
+  return view( 'layouts.wrapper', [ 'page'=>'advs.manifesto-page' ] )
    ->with( 'adv', $adv )
    ->with( 'videos', $videos );
  }

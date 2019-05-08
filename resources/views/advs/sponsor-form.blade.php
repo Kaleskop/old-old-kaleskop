@@ -1,4 +1,4 @@
-<form method="POST" action="{{ route( 'advs.sponsor', $adv ) }}">
+<form method="POST" action="{{ route( 'advs.sponsorTo', $adv ) }}">
  @csrf
 
  <p>{{ $adv->title }}</p>
