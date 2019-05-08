@@ -20,5 +20,6 @@ $factory->define( Business::class, function( Faker $faker ) {
   'address_line1' => $faker->address,
   'city'          => $faker->city,
   'cap'           => $faker->postcode,
+  'terms_at'      => null,
  ];
 } );
