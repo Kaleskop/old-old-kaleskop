@@ -6,7 +6,12 @@
 
   <div>
    <label for="country">{{ __( 'Country' ) }}</label>
-   <select name="country"></select>
+   <select name="country">
+    @foreach( $countries as $iso=>$country )
+     <option value="{{ $iso }}">{{ $country }}</option>
+
+    @endforeach
+   </select>
 
    @if ( $errors->has( 'country' ) )
     {{ $errors->first( 'country' ) }}
