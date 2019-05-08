@@ -75,7 +75,7 @@ class AdvsController extends Controller {
  }
 
  public function sponsor( Adv $adv ) {
-  $brands = Auth::user()->brands()->latest()->get();
+  $brands = Auth::user()->business->brands()->latest()->get();
 
   return view( 'layouts.wrapper', [ 'page'=>'advs.sponsor-page' ] )
    ->with( 'adv', $adv )
