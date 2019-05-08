@@ -23,6 +23,7 @@ class CreateBusinessesTable extends Migration {
    $table->string( 'address_line1' );
    $table->string( 'city' );
    $table->string( 'cap' );
+   $table->timestamp( 'terms_at' )->nullable();
 
    $table->string( 'stripe_id' )->nullable()->collation( 'utf8mb4_bin' );
    $table->string( 'card_brand' )->nullable();
