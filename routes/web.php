@@ -40,10 +40,12 @@ Route::get( '/plans/create', 'PlansController@create' )->name( 'plans.create' );
 // - advs
 Route::post( '/advs/store', 'AdvsController@store' )->name( 'advs.store' );
 Route::post( '/advs/linkTo/{adv}', 'AdvsController@linkTo' )->name( 'advs.linkTo' );
+Route::post( '/advs/linkTo/{adv}', 'AdvsController@sponsorTo' )->name( 'advs.sponsor' );
 Route::delete( '/advs/{adv}', 'AdvsController@destroy' )->name( 'advs.destroy' );
 Route::get( '/advs', 'AdvsController@index' )->name( 'advs.index' );
 Route::get( '/advs/create', 'AdvsController@create' )->name( 'advs.create' );
 Route::get( '/advs/linkTo/{adv}', 'AdvsController@manifesto' )->name( 'advs.manifesto' );
+Route::get( '/advs/linkTo/{adv}', 'AdvsController@sponsor' )->name( 'advs.sponsor' );
 
 // - opineon
 Route::post( '/opineon/{subject}', 'OpineonController@express' )->name( 'opineon.express' );
@@ -51,10 +53,12 @@ Route::post( '/opineon/{opinion}/comment', 'OpineonController@comment' )->name( 
 
 // - brands
 Route::post( '/brands/store', 'BrandsController@store' )->name( 'brands.store' );
+Route::post( '/brands/linkTo/{brand}', 'BrandsController@linkTo' )->name( 'brands.linkTo' );
 Route::patch( '/brands/{brand}', 'BrandsController@update' )->name( 'brands.update' );
 Route::delete( '/brands/{brand}', 'BrandsController@destroy' )->name( 'brands.destroy' );
 Route::get( '/brands', 'BrandsController@index' )->name( 'brands.index' );
 Route::get( '/brands/create', 'BrandsController@create' )->name( 'brands.create' );
+Route::get( '/brands/linkTo/{brand}', 'BrandsController@sponsor' )->name( 'brands.sponsor' );
 
 // - videos
 Route::post( '/videos/upload', 'VideosController@upload' )->name( 'videos.upload' );

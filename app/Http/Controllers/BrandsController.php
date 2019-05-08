@@ -54,6 +54,16 @@ class BrandsController extends Controller {
   return back();
  }
 
+ public function linkTo( Request $request, Brand $brand ) {
+  $this->validate( $request, [
+   'advs' => [ 'required', 'array' ]
+  ] );
+
+  $brand->advs()->attach( $request->advs );
+
+  return back();
+ }
+
 
  // - view actions
 
@@ -66,5 +76,13 @@ class BrandsController extends Controller {
 
  public function create() {
   return view( 'layouts.wrapper', [ 'page'=>'brands.create-page' ] );
+ }
+
+ public function sponsor( Brand $brand ) {
+  $advs = Auth::user()->advs;
+
+  return view( 'layouts.wrapper', [ 'page'=>'brands.linkTo-page' ] )
+   ->with( 'brand', $brand )
+   ->with( 'advs', $advs );
  }
 }
