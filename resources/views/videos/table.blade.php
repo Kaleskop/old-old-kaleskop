@@ -15,6 +15,10 @@
    <td>{{ $video->type }}</td>
    <td>{{ $video->size }}</td>
    <td>
+    <div>
+     <a href="{{ route( 'videos.manifesto', $video ) }}">{{ __( 'Manifesto' ) }}</a>
+    </div>
+
     @include( 'videos.delete-form' )
 
    </td>
