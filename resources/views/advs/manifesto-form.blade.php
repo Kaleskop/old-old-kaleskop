@@ -1,7 +1,7 @@
 <form method="POST" action="{{ route( 'advs.manifestoTo', $adv ) }}">
  @csrf
 
- <p>{{ $video->title }}</p>
+ <p>{{ $adv->title }}</p>
 
  <fieldset>
   <legend>{{ __( 'Manifesto details' ) }}</legend>
