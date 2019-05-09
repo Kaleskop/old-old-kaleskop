@@ -1,7 +1,7 @@
 <section>
  <h3>{{ __( 'Opineon' ) }}</h3>
 
- @if ( $opineon->exists() )
+ @if ( isset( $opineon ) && $opineon->exists() )
   @include( 'opineons.opineon', [ 'opineon'=>$opineon->first() ] )
 
  @else
@@ -11,6 +11,7 @@
   @endauth
  @endif
 
+ @isset( $opinions )
  <div>
   @forelse( $opinions as $opinion )
    @include( 'opineons.feed' )
@@ -20,4 +21,7 @@
 
   @endforelse
  </div>
+
+ @endisset
+
 </section>
