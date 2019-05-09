@@ -9,7 +9,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Agpretto\Opineon\Traits\Opineon;
 use Agpretto\Opineon\Traits\CanComment;
 
-class User extends Authenticatable {
+class User extends Authenticatable implements MustVerifyEmail {
 
  use Notifiable, Opineon, CanComment;
 

@@ -11,7 +11,7 @@
 |
 */
 
-Auth::routes();
+Auth::routes( [ 'verify'=>true ] );
 
 Route::get( '/', 'WebsiteController@homepage' )->name( 'website.homepage' );
 Route::get( '/k/{adv}', 'WebsiteController@endpoint' )->name( 'website.endpoint' );
