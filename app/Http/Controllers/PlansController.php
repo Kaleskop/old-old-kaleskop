@@ -60,6 +60,7 @@ class PlansController extends Controller {
    'plan'        => [ 'required' ],
    'stripeToken' => [ 'required' ],
    'coupon'      => [ 'nullable', 'string', 'max:255' ],
+   'terms'       => [ 'accepted' ],
   ] );
 
   $business = $request->user()->business;
@@ -69,6 +70,7 @@ class PlansController extends Controller {
    $subscription->withCoupon( $request->coupon );
   }
   $subscription = $subscription->create( $request->stripeToken );
+  $subscription->update( [ 'terms_at'=>Carbon::now() ] );
 
   return back();
  }
