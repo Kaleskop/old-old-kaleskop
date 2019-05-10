@@ -8,7 +8,7 @@
    <label for="country">{{ __( 'Country' ) }}</label>
    <select name="country">
     @foreach( $countries as $iso=>$country )
-     <option value="{{ $iso }}">{{ $country }}</option>
+     <option value="{{ $iso }}"{{ (old( 'country' ) === $iso) ? ' selected' : '' }}>{{ $country }}</option>
 
     @endforeach
    </select>
