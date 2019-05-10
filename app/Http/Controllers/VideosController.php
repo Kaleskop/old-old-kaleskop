@@ -51,7 +51,7 @@ class VideosController extends Controller {
    'advs' => [ 'required', 'array' ]
   ] );
 
-  $video->advs()->attach( $request->advs );
+  $video->advs()->toggle( $request->advs );
 
   return back();
  }
