@@ -16,13 +16,13 @@
   <span class="fas fa-tags"></span>
   <span>{{ __( 'Brands' ) }}</span>
  </a>
- @endbusiness
-
- @subscribed
  <a href="{{ route( 'advs.index' ) }}">
   <span class="fas fa-play"></span>
   <span>{{ __( 'Advertisements' ) }}</span>
  </a>
+ @endbusiness
+
+ @subscribed
  <a href="{{ route( 'videos.index' ) }}">
   <span class="fas fa-film"></span>
   <span>{{ __( 'Videos' ) }}</span>
