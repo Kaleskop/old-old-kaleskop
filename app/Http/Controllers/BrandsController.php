@@ -12,6 +12,7 @@ class BrandsController extends Controller {
  public function __construct() {
   $this->middleware( 'auth' );
   $this->middleware( 'business' );
+  $this->middleware( 'subscribed' )->only( [ 'sponsor', 'linkTo' ] );
  }
 
  public function store( Request $request ) {
