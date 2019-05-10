@@ -10,7 +10,7 @@
    <label for="brands">{{ __( 'Brands' ) }}</label>
    <select name="brands[]" id="brands" multiple>
     @foreach( $brands as $brand )
-     <option value="{{ $brand->id }}">{{ $brand->name }}</option>
+     <option value="{{ $brand->id }}"{{ in_array( $brand->id, $adv->brands()->pluck( 'id' )->toArray()) ? ' selected' : '' }}>{{ $brand->name }}</option>
 
     @endforeach
    </select>
