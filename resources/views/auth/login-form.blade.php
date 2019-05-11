@@ -13,7 +13,7 @@
    @endif
   </div>
 
-  <div>
+  <div class="mt-4">
    <label for="password" class="block p-2 font-semibold">{{ __( 'Password' ) }}</label>
    <input type="password" name="password" id="password" required />
 
@@ -22,7 +22,7 @@
    @endif
   </div>
 
-  <div>
+  <div class="mt-4">
    <label for="remember" class="block p-2 font-semibold">{{ __( 'Stay connected' ) }}</label>
 
    <div>
