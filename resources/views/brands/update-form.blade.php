@@ -2,7 +2,7 @@
  @csrf
  @method( 'PATCH' )
 
- <fieldset>
+ <fieldset class="mb-8">
   <legend class="p-2 font-light italic">{{ __( 'Brand details' ) }}</legend>
 
   <div>
