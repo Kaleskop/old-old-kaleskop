@@ -2,7 +2,7 @@
  @csrf
 
  <fieldset>
-  <legend>{{ __( 'Sign up' ) }}</legend>
+  <legend class="p-2 font-light italic">{{ __( 'Sign up' ) }}</legend>
 
   <div>
    <label for="name" class="block p-2 font-semibold">{{ __( 'Name' ) }}</label>
@@ -38,7 +38,7 @@
  </fieldset>
 
  <fieldset>
-  <legend>{{ __( 'Terms & Conditions' ) }}</legend>
+  <legend class="p-2 font-light italic">{{ __( 'Terms & Conditions' ) }}</legend>
 
   <div>
    <input type="checkbox" name="terms" id="terms" value="true" />
