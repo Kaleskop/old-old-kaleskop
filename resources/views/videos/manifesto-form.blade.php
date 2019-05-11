@@ -1,7 +1,7 @@
 <form method="POST" action="{{ route( 'videos.linkTo', $video ) }}">
  @csrf
 
- <p>{{ $video->name }}</p>
+ <p class="mb-2 font-medium text-2xl uppercase">{{ $video->name }}</p>
 
  <fieldset class="mb-8">
   <legend class="p-2 font-light italic">{{ __( 'Manifesto details' ) }}</legend>
