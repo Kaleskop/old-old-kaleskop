@@ -13,7 +13,7 @@
    @endif
   </div>
 
-  <div>
+  <div class="mt-4">
    <label for="email" class="block p-2 font-semibold">{{ __( 'Email address' ) }}</label>
    <input type="email" name="email" id="email" required />
 
@@ -22,7 +22,7 @@
    @endif
   </div>
 
-  <div>
+  <div class="mt-4">
    <label for="password" class="block p-2 font-semibold">{{ __( 'Password' ) }}</label>
    <input type="password" name="password" id="password" required />
 
@@ -31,7 +31,7 @@
    @endif
   </div>
 
-  <div>
+  <div class="mt-4">
    <label for="password_confirmation" class="block p-2 font-semibold">{{ __( 'Confirm password' ) }}</label>
    <input type="password" name="password_confirmation" id="password_confirmation" required />
   </div>
