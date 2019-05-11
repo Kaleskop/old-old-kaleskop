@@ -16,7 +16,7 @@
 
   <div class="mt-4">
    <label for="description" class="block p-2 font-semibold">{{ __( 'Description' ) }}</label>
-   <textarea name="description" id="description">{{ $brand->description }}</textarea>
+   <textarea name="description" id="description" class="appearance-none outline-none cursor-text block resize-y w-full leading-snug py-1 px-2 border border-transparent bg-white shadow focus:shadow-md">{{ $brand->description }}</textarea>
 
    @if ( $errors->has( 'description' ) )
     {{ $errors->first( 'description' ) }}
