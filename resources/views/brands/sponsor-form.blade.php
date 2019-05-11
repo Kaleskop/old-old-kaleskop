@@ -7,7 +7,7 @@
   <legend>{{ __( 'Sponsor details' ) }}</legend>
 
   <div>
-   <label for="advs">{{ __( 'Advertisements' ) }}</label>
+   <label for="advs" class="block p-2 font-semibold">{{ __( 'Advertisements' ) }}</label>
    <select name="advs[]" id="advs" multiple>
     @foreach( $advs as $adv )
      <option value="{{ $adv->id }}"{{ in_array( $adv->id, $brand->advs()->pluck( 'id' )->toArray()) ? ' selected' : '' }}>{{ $adv->title }}</option>
