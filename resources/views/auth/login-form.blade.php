@@ -5,7 +5,7 @@
   <legend>{{ __( 'Login' ) }}</legend>
 
   <div>
-   <label for="email">{{ __( 'Email address' ) }}</label>
+   <label for="email" class="block p-2 font-semibold">{{ __( 'Email address' ) }}</label>
    <input type="email" name="email" id="email" required autofocus />
 
    @if ( $errors->has( 'email' ) )
@@ -14,7 +14,7 @@
   </div>
 
   <div>
-   <label for="password">{{ __( 'Password' ) }}</label>
+   <label for="password" class="block p-2 font-semibold">{{ __( 'Password' ) }}</label>
    <input type="password" name="password" id="password" required />
 
    @if ( $errors->has( 'password' ) )
@@ -23,7 +23,7 @@
   </div>
 
   <div>
-   <label for="remember">{{ __( 'Stay connected' ) }}</label>
+   <label for="remember" class="block p-2 font-semibold">{{ __( 'Stay connected' ) }}</label>
 
    <div>
     <input type="checkbox" name="remember" id="remember" value="true" />
