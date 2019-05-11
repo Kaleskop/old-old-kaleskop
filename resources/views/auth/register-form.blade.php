@@ -5,7 +5,7 @@
   <legend>{{ __( 'Sign up' ) }}</legend>
 
   <div>
-   <label for="name">{{ __( 'Name' ) }}</label>
+   <label for="name" class="block p-2 font-semibold">{{ __( 'Name' ) }}</label>
    <input type="text" name="name" id="name" value="{{ old( 'name' ) }}" required autofocus />
 
    @if ( $errors->has( 'name' ) )
@@ -14,7 +14,7 @@
   </div>
 
   <div>
-   <label for="email">{{ __( 'Email address' ) }}</label>
+   <label for="email" class="block p-2 font-semibold">{{ __( 'Email address' ) }}</label>
    <input type="email" name="email" id="email" required />
 
    @if ( $errors->has( 'email' ) )
@@ -23,7 +23,7 @@
   </div>
 
   <div>
-   <label for="password">{{ __( 'Password' ) }}</label>
+   <label for="password" class="block p-2 font-semibold">{{ __( 'Password' ) }}</label>
    <input type="password" name="password" id="password" required />
 
    @if ( $errors->has( 'password' ) )
@@ -32,7 +32,7 @@
   </div>
 
   <div>
-   <label for="password_confirmation">{{ __( 'Confirm password' ) }}</label>
+   <label for="password_confirmation" class="block p-2 font-semibold">{{ __( 'Confirm password' ) }}</label>
    <input type="password" name="password_confirmation" id="password_confirmation" required />
   </div>
  </fieldset>
