@@ -16,7 +16,7 @@
    <td>{{ $video->size }}</td>
    <td>
     <div>
-     <a href="{{ route( 'videos.manifesto', $video ) }}">{{ __( 'Manifesto' ) }}</a>
+     <a href="{{ route( 'videos.manifesto', $video ) }}" class="underline">{{ __( 'Manifesto' ) }}</a>
     </div>
 
     @include( 'videos.delete-form' )
