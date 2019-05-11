@@ -4,7 +4,7 @@
  <p>{{ $video->name }}</p>
 
  <fieldset>
-  <legend>{{ __( 'Manifesto details' ) }}</legend>
+  <legend class="p-2 font-light italic">{{ __( 'Manifesto details' ) }}</legend>
 
   <div>
    <label for="advs" class="block p-2 font-semibold">{{ __( 'Advertisements' ) }}</label>
