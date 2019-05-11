@@ -1,7 +1,7 @@
 <form method="POST" action="{{ route( 'login' ) }}">
  @csrf
 
- <fieldset>
+ <fieldset class="mb-8">
   <legend class="p-2 font-light italic">{{ __( 'Login' ) }}</legend>
 
   <div>
