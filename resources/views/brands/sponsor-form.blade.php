@@ -4,7 +4,7 @@
  <p>{{ $brand->name }}</p>
 
  <fieldset>
-  <legend>{{ __( 'Sponsor details' ) }}</legend>
+  <legend class="p-2 font-light italic">{{ __( 'Sponsor details' ) }}</legend>
 
   <div>
    <label for="advs" class="block p-2 font-semibold">{{ __( 'Advertisements' ) }}</label>
