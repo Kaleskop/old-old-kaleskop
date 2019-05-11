@@ -3,7 +3,7 @@
 
  <p>{{ $brand->name }}</p>
 
- <fieldset>
+ <fieldset class="mb-8">
   <legend class="p-2 font-light italic">{{ __( 'Sponsor details' ) }}</legend>
 
   <div>
