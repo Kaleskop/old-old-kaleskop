@@ -28,5 +28,5 @@
   </div>
  </fieldset>
 
- <button type="submit">{{ __( 'Reset password' ) }}</button>
+ <button type="submit" class="appearance-none outline-none cursor-pointer select-none block w-full leading-snug py-1 px-2 border border-transparent bg-gray-400 text-lg font-semibold text-center focus:shadow-md">{{ __( 'Reset password' ) }}</button>
 </form>
