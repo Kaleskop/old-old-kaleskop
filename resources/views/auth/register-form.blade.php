@@ -1,7 +1,7 @@
 <form method="POST" action="{{ route( 'register' ) }}">
  @csrf
 
- <fieldset>
+ <fieldset class="mb-8">
   <legend class="p-2 font-light italic">{{ __( 'Sign up' ) }}</legend>
 
   <div>
@@ -37,7 +37,7 @@
   </div>
  </fieldset>
 
- <fieldset>
+ <fieldset class="mb-8">
   <legend class="p-2 font-light italic">{{ __( 'Terms & Conditions' ) }}</legend>
 
   <div>
