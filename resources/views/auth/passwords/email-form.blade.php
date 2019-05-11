@@ -6,7 +6,7 @@
 
   <div>
    <label for="email" class="block p-2 font-semibold">{{ __('Email address') }}</label>
-   <input type="email" name="email" id="email" value="{{ old( 'email' ) }}" required autofocus />
+   <input type="email" name="email" id="email" class="appearance-none outline-none cursor-text block w-full leading-snug py-1 px-2 rounded border border-transparent bg-white shadow focus:shadow-md" value="{{ old( 'email' ) }}" required autofocus />
 
    @if ($errors->has('email'))
     {{ $errors->first('email') }}
