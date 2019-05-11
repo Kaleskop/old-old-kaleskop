@@ -5,7 +5,7 @@
   <legend>{{ __( 'Video details' ) }}</legend>
 
   <div>
-   <label for="uservideo">{{ __( 'Choose Video' ) }}</label>
+   <label for="uservideo" class="block p-2 font-semibold">{{ __( 'Choose Video' ) }}</label>
    <input type="file" accept="video/*" name="uservideo" id="uservideo" required />
 
    @if ( $errors->has( 'uservideo' ) )
