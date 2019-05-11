@@ -5,7 +5,7 @@
   <legend>{{ __( 'Account details' ) }}</legend>
 
   <div>
-   <label for="email">{{ __('Email address') }}</label>
+   <label for="email" class="block p-2 font-semibold">{{ __('Email address') }}</label>
    <input type="email" name="email" id="email" value="{{ old( 'email' ) }}" required autofocus />
 
    @if ($errors->has('email'))
