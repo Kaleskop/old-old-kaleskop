@@ -1,4 +1,4 @@
-<table>
+<table class="relative overflow-hidden w-full bg-white">
  <thead>
   <tr>
    <th scope="col">{{ __( 'Name' ) }}</th>
