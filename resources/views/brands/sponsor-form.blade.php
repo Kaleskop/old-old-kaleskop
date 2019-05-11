@@ -1,7 +1,7 @@
 <form method="POST" action="{{ route( 'brands.linkTo', $brand ) }}">
  @csrf
 
- <p>{{ $brand->name }}</p>
+ <p class="mb-2 font-medium text-xl uppercase">{{ $brand->name }}</p>
 
  <fieldset class="mb-8">
   <legend class="p-2 font-light italic">{{ __( 'Sponsor details' ) }}</legend>
