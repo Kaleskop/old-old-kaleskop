@@ -1,7 +1,7 @@
 <form method="POST" action="{{ route( 'plans.store' ) }}">
  @csrf
 
- <fieldset>
+ <fieldset class="mb-8">
   <legend class="p-2 font-light italic">{{ __( 'Plan details' ) }}</legend>
 
   <div>
@@ -32,7 +32,7 @@
   </div>
  </fieldset>
 
- <fieldset>
+ <fieldset class="mb-8">
   <legend class="p-2 font-light italic">{{ __( 'Plan details' ) }}</legend>
 
   <div>
