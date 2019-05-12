@@ -13,7 +13,7 @@
    @endif
   </div>
 
-  <div>
+  <div class="mt-4">
    <label for="description" class="block p-2 font-semibold">{{ __( 'Description' ) }}</label>
    <textarea name="description" id="description">{{ old( 'description' ) }}</textarea>
 
@@ -22,7 +22,7 @@
    @endif
   </div>
 
-  <div>
+  <div class="mt-4">
    <label for="price" class="block p-2 font-semibold">{{ __( 'Price' ) }}</label>
    <input type="number" min="0" step="0.01" name="price" id="price" value="{{ old( 'price' ) }}" required />
 
@@ -44,7 +44,7 @@
    @endif
   </div>
 
-  <div>
+  <div class="mt-4">
    <label for="product_name" class="block p-2 font-semibold">{{ __( 'Product name' ) }}</label>
    <input type="text" name="product_name" id="product_name" value="{{ old( 'product_name' ) }}" required />
 
@@ -53,7 +53,7 @@
    @endif
   </div>
 
-  <div>
+  <div class="mt-4">
    <label for="plan_id" class="block p-2 font-semibold">{{ __( 'Plan id' ) }}</label>
    <input type="text" name="plan_id" id="plan_id" value="{{ old( 'plan_id' ) }}" required />
 
