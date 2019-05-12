@@ -2,7 +2,7 @@
  @csrf
 
  <fieldset>
-  <legend>{{ __( 'Plan details' ) }}</legend>
+  <legend class="p-2 font-light italic">{{ __( 'Plan details' ) }}</legend>
 
   <div>
    <label for="name" class="block p-2 font-semibold">{{ __( 'Name' ) }}</label>
@@ -33,7 +33,7 @@
  </fieldset>
 
  <fieldset>
-  <legend>{{ __( 'Plan details' ) }}</legend>
+  <legend class="p-2 font-light italic">{{ __( 'Plan details' ) }}</legend>
 
   <div>
    <label for="product_id" class="block p-2 font-semibold">{{ __( 'Product id' ) }}</label>
