@@ -1,7 +1,7 @@
 <form method="POST" action="{{ route( 'advs.store' ) }}">
  @csrf
 
- <fieldset>
+ <fieldset class="mb-8">
   <legend class="p-2 font-light italic">{{ __( 'Advertisement details' ) }}</legend>
 
   <div>
