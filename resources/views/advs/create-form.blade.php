@@ -13,7 +13,7 @@
    @endif
   </div>
 
-  <div>
+  <div class="mt-4">
    <label for="endpoint" class="block p-2 font-semibold">{{ __( 'Endpoint' ) }}</label>
    <input type="text" name="endpoint" id="endpoint" value="{{ old( 'endpoint' ) }}" required />
 
