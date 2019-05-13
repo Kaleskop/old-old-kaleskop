@@ -6,7 +6,7 @@
 
   <div>
    <label for="country">{{ __( 'Country' ) }}</label>
-   <select name="country">
+   <select name="country" id="country" required>
     @foreach( $countries as $iso=>$country )
      <option value="{{ $iso }}"{{ (old( 'country' ) === $iso) ? ' selected' : '' }}>{{ $country }}</option>
 
