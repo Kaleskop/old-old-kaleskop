@@ -37,7 +37,7 @@ class AdvsController extends Controller {
    'videos' => [ 'required', 'array' ]
   ] );
 
-  $adv->videos()->toggle( $request->videos );
+  $adv->videos()->sync( $request->videos );
 
   return back();
  }
@@ -47,7 +47,7 @@ class AdvsController extends Controller {
    'brands' => [ 'required', 'array' ]
   ] );
 
-  $adv->brands()->toggle( $request->brands );
+  $adv->brands()->sync( $request->brands );
 
   return back();
  }

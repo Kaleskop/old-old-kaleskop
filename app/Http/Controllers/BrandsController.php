@@ -60,7 +60,7 @@ class BrandsController extends Controller {
    'advs' => [ 'required', 'array' ]
   ] );
 
-  $brand->advs()->toggle( $request->advs );
+  $brand->advs()->sync( $request->advs );
 
   return back();
  }
