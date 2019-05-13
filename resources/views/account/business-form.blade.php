@@ -77,18 +77,18 @@
   </div>
  </fieldset>
 
- <div>
-  <label for="terms">{{ __( 'Terms & Conditions' ) }}</label>
+ <fieldset>
+  <legend>{{ __( 'Terms & Conditions' ) }}</legend>
 
   <div>
    <input type="checkbox" name="terms" id="terms" value="true" />
    <label for="terms">{{ __( 'I agree with the' ) }} <a href="" target="_blank">{{ __( 'Terms of service' ) }}</a></label>
-  </div>
 
-  @if ( $errors->has( 'terms' ) )
-   {{ $errors->first( 'terms' ) }}
-  @endif
- </div>
+   @if ( $errors->has( 'terms' ) )
+    {{ $errors->first( 'terms' ) }}
+   @endif
+  </div>
+ </fieldset>
 
  <button type="submit">{{ __( 'Register' ) }}</button>
 </form>
