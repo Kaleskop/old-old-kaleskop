@@ -35,14 +35,14 @@
    <label for="password_confirmation">{{ __( 'Confirm password' ) }}</label>
    <input type="password" name="password_confirmation" id="password_confirmation" required />
   </div>
+ </fieldset>
+
+ <fieldset>
+  <legend>{{ __( 'Terms & Conditions' ) }}</legend>
 
   <div>
-   <label for="terms">{{ __( 'Terms & Conditions' ) }}</label>
-
-   <div>
-    <input type="checkbox" name="terms" id="terms" value="true" />
-    <label for="terms">{{ __( 'I agree with the' ) }} <a href="" target="_blank">{{ __( 'Terms of service' ) }}</a></label>
-   </div>
+   <input type="checkbox" name="terms" id="terms" value="true" />
+   <label for="terms">{{ __( 'I agree with the' ) }} <a href="" target="_blank">{{ __( 'Terms of service' ) }}</a></label>
 
    @if ( $errors->has( 'terms' ) )
     {{ $errors->first( 'terms' ) }}
