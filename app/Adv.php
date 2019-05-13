@@ -27,6 +27,13 @@ class Adv extends Model {
  protected $fillable = [ 'title', 'endpoint', 'clicks', 'published_at' ];
 
  /**
+  * The relationships that should always be loaded.
+  *
+  * @var array
+  */
+ protected $with = [ 'videos' ];
+
+ /**
   * Register methods when booting model
   */
  public static function boot() {
