@@ -1,7 +1,7 @@
 <form method="POST" action="{{ route( 'business.store' ) }}">
  @csrf
 
- <fieldset>
+ <fieldset class="mb-8">
   <legend class="p-2 font-light italic">{{ __( 'Business details' ) }}</legend>
 
   <div>
@@ -46,7 +46,7 @@
   </div>
  </fieldset>
 
- <fieldset>
+ <fieldset class="mb-8">
   <legend class="p-2 font-light italic">{{ __( 'Address details' ) }}</legend>
 
   <div>
@@ -77,7 +77,7 @@
   </div>
  </fieldset>
 
- <fieldset>
+ <fieldset class="mb-8">
   <legend class="p-2 font-light italic">{{ __( 'Terms & Conditions' ) }}</legend>
 
   <div>
