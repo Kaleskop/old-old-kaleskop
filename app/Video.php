@@ -59,7 +59,7 @@ class Video extends Model {
   * @return \Illuminate\Database\Eloquent\Relations\belongsToMany
   */
  public function advs() {
-  return $this->belongsToMany( Adv::class, 'manifesto', 'video_id', 'adv_id' );
+  return $this->belongsToMany( Adv::class, 'manifesto', 'video_id', 'adv_id' )->withTimestamps();
  }
 
 

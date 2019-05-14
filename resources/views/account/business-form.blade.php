@@ -6,7 +6,7 @@
 
   <div>
    <label for="country">{{ __( 'Country' ) }}</label>
-   <select name="country">
+   <select name="country" id="country" required>
     @foreach( $countries as $iso=>$country )
      <option value="{{ $iso }}"{{ (old( 'country' ) === $iso) ? ' selected' : '' }}>{{ $country }}</option>
 
@@ -77,18 +77,18 @@
   </div>
  </fieldset>
 
- <div>
-  <label for="terms">{{ __( 'Terms & Conditions' ) }}</label>
+ <fieldset>
+  <legend>{{ __( 'Terms & Conditions' ) }}</legend>
 
   <div>
    <input type="checkbox" name="terms" id="terms" value="true" />
-   <label for="terms">{{ __( 'I agree with the' ) }} <a href="" target="_blank">{{ __( 'Terms of service' ) }}</a></p>
-  </div>
+   <label for="terms">{{ __( 'I agree with the' ) }} <a href="" target="_blank">{{ __( 'Terms of service' ) }}</a></label>
 
-  @if ( $errors->has( 'terms' ) )
-   {{ $errors->first( 'terms' ) }}
-  @endif
- </div>
+   @if ( $errors->has( 'terms' ) )
+    {{ $errors->first( 'terms' ) }}
+   @endif
+  </div>
+ </fieldset>
 
  <button type="submit">{{ __( 'Register' ) }}</button>
 </form>

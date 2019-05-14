@@ -10,7 +10,10 @@
    <p>{{ Illuminate\Mail\Markdown::parse( $brand->description ) }}</p>
 
    <footer>
-    <a href="{{ route( 'brands.sponsor', $brand ) }}">{{ __( 'Sponsor' ) }}</a>
+    @subscribed
+     <a href="{{ route( 'brands.sponsor', $brand ) }}">{{ __( 'Sponsor' ) }}</a>
+
+    @endsubscribed
    </footer>
   </article>
  </div>

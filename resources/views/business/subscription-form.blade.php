@@ -32,13 +32,6 @@
   </div>
 
   <div>
-   <label for="card-element">{{ __( 'Credit or debit card' ) }}</label>
-   <div id="card-element"></div>
-   <div id="card-errors" role="alert"></div>
-   <input type="hidden" name="stripeToken" />
-  </div>
-
-  <div>
    <label for="coupon">{{ __( 'Coupon' ) }}</label>
    <input type="text" name="coupon" id="coupon" />
 
@@ -46,14 +39,25 @@
     {{ $errors->first( 'coupon' ) }}
    @endif
   </div>
+ </fieldset>
+
+ <fieldset>
+  <legend>{{ __( 'Payment details' ) }}</legend>
 
   <div>
-   <label for="terms">{{ __( 'Terms & Conditions' ) }}</label>
+   <label for="card-element">{{ __( 'Credit or debit card' ) }}</label>
+   <div id="card-element"></div>
+   <div id="card-errors" role="alert"></div>
+   <input type="hidden" name="stripeToken" />
+  </div>
+ </fieldset>
 
-   <div>
-    <input type="checkbox" name="terms" id="terms" value="true" />
-    <label for="terms">{{ __( 'I agree with the' ) }} <a href="" target="_blank">{{ __( 'Terms of service' ) }}</a></label>
-   </div>
+ <fieldset>
+  <legend>{{ __( 'Terms & Conditions' ) }}</legend>
+
+  <div>
+   <input type="checkbox" name="terms" id="terms" value="true" />
+   <label for="terms">{{ __( 'I agree with the' ) }} <a href="" target="_blank">{{ __( 'Terms of service' ) }}</a></label>
 
    @if ( $errors->has( 'terms' ) )
     {{ $errors->first( 'terms' ) }}

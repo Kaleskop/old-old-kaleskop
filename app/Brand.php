@@ -55,6 +55,6 @@ class Brand extends Model {
   * @return \Illuminate\Database\Eloquent\Relations\belongsToMany
   */
  public function advs() {
-  return $this->belongsToMany( Adv::class, 'sponsor', 'brand_id', 'adv_id' );
+  return $this->belongsToMany( Adv::class, 'sponsor', 'brand_id', 'adv_id' )->withTimestamps();
  }
 }

@@ -62,7 +62,7 @@ class Adv extends Model {
   * @return \Illuminate\Database\Eloquent\Relations\belongsToMany
   */
  public function videos() {
-  return $this->belongsToMany( Video::class, 'manifesto', 'adv_id', 'video_id' );
+  return $this->belongsToMany( Video::class, 'manifesto', 'adv_id', 'video_id' )->withTimestamps();
  }
 
  /**
@@ -71,6 +71,6 @@ class Adv extends Model {
   * @return \Illuminate\Database\Eloquent\Relations\belongsToMany
   */
  public function brands() {
-  return $this->belongsToMany( Brand::class, 'sponsor', 'adv_id', 'brand_id' );
+  return $this->belongsToMany( Brand::class, 'sponsor', 'adv_id', 'brand_id' )->withTimestamps();
  }
 }

@@ -12,6 +12,7 @@ class BrandsController extends Controller {
  public function __construct() {
   $this->middleware( 'auth' );
   $this->middleware( 'business' );
+  $this->middleware( 'subscribed' )->only( [ 'sponsor', 'linkTo' ] );
  }
 
  public function store( Request $request ) {
@@ -59,7 +60,7 @@ class BrandsController extends Controller {
    'advs' => [ 'required', 'array' ]
   ] );
 
-  $brand->advs()->attach( $request->advs );
+  $brand->advs()->sync( $request->advs );
 
   return back();
  }
@@ -81,7 +82,7 @@ class BrandsController extends Controller {
  public function sponsor( Brand $brand ) {
   $advs = Auth::user()->advs;
 
-  return view( 'layouts.wrapper', [ 'page'=>'brands.linkTo-page' ] )
+  return view( 'layouts.wrapper', [ 'page'=>'brands.sponsor-page' ] )
    ->with( 'brand', $brand )
    ->with( 'advs', $advs );
  }

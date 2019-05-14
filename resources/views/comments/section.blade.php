@@ -11,7 +11,7 @@
    @include( 'comments.tile' )
 
   @empty
-   <div>{{ __( 'No Comments' ) }}</div>
+   <p>{{ __( 'No Comments' ) }}</p>
 
   @endforelse
  </div>

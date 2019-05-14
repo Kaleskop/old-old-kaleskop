@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Adv;
-use App\Auth;
+use Auth;
 
 class AdvsController extends Controller {
 
@@ -32,12 +32,12 @@ class AdvsController extends Controller {
   return back();
  }
 
- public function linkTo( Request $request, Adv $adv ) {
+ public function manifestoTo( Request $request, Adv $adv ) {
   $this->validate( $request, [
    'videos' => [ 'required', 'array' ]
   ] );
 
-  $adv->videos()->attach( $request->videos );
+  $adv->videos()->sync( $request->videos );
 
   return back();
  }
@@ -47,7 +47,7 @@ class AdvsController extends Controller {
    'brands' => [ 'required', 'array' ]
   ] );
 
-  $adv->brands()->attach( $request->brands );
+  $adv->brands()->sync( $request->brands );
 
   return back();
  }
@@ -69,13 +69,13 @@ class AdvsController extends Controller {
  public function manifesto( Adv $adv ) {
   $videos = Auth::user()->business->videos()->latest()->get();
 
-  return view( 'layouts.wrapper', [ 'page'=>'advs.linkTo' ] )
+  return view( 'layouts.wrapper', [ 'page'=>'advs.manifesto-page' ] )
    ->with( 'adv', $adv )
    ->with( 'videos', $videos );
  }
 
  public function sponsor( Adv $adv ) {
-  $brands = Auth::user()->brands()->latest()->get();
+  $brands = Auth::user()->business->brands()->latest()->get();
 
   return view( 'layouts.wrapper', [ 'page'=>'advs.sponsor-page' ] )
    ->with( 'adv', $adv )

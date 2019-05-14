@@ -16,6 +16,10 @@
   <span class="fas fa-tags"></span>
   <span>{{ __( 'Brands' ) }}</span>
  </a>
+ <a href="{{ route( 'advs.index' ) }}">
+  <span class="fas fa-play"></span>
+  <span>{{ __( 'Advertisements' ) }}</span>
+ </a>
  @endbusiness
 
  @subscribed
