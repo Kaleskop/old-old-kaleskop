@@ -1,6 +1,10 @@
 module.exports = {
   theme: {
-    extend: {}
+    extend: {
+     colors: {
+      "kaleskop-gold": '#fbc56d'
+     }
+    }
   },
   variants: {},
   plugins: []
