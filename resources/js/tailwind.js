@@ -1,6 +1,14 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   theme: {
     extend: {
+     fontFamily: {
+      sans: [
+       "Alegreya Sans",
+       ...defaultTheme.fontFamily.sans
+      ]
+     },
      colors: {
       grey: {
        '100': '#f5f5f5',
@@ -13,7 +21,7 @@ module.exports = {
        '800': '#424242',
        '900': '#212121',
       },
-      "kaleskop-gold": '#fbc56d'
+      "kaleskop-gold": '#fbc56d',
      }
     }
   },
