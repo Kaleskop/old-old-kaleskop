@@ -2,7 +2,7 @@
  @csrf
 
  <fieldset>
-  <legend>{{ __( 'Business details' ) }}</legend>
+  <legend class="p-2 font-light italic">{{ __( 'Business details' ) }}</legend>
 
   <div>
    <label for="country" class="block p-2 font-semibold">{{ __( 'Country' ) }}</label>
@@ -47,7 +47,7 @@
  </fieldset>
 
  <fieldset>
-  <legend>{{ __( 'Address details' ) }}</legend>
+  <legend class="p-2 font-light italic">{{ __( 'Address details' ) }}</legend>
 
   <div>
    <label for="address_line1" class="block p-2 font-semibold">{{ __( 'Address' ) }}</label>
@@ -78,7 +78,7 @@
  </fieldset>
 
  <fieldset>
-  <legend>{{ __( 'Terms & Conditions' ) }}</legend>
+  <legend class="p-2 font-light italic">{{ __( 'Terms & Conditions' ) }}</legend>
 
   <div>
    <input type="checkbox" name="terms" id="terms" value="true" />
