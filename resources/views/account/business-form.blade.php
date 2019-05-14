@@ -20,7 +20,7 @@
 
   <div class="mt-4">
    <label for="name" class="block p-2 font-semibold">{{ __( 'Legal Name' ) }}</label>
-   <input type="text" name="name" id="name" placeholder="My Company Ltd" value="{{ old( 'name' ) }}" required />
+   <input type="text" name="name" id="name" class="appearance-none outline-none cursor-text block w-full leading-snug py-1 px-2 rounded border border-transparent bg-white shadow focus:shadow-md" placeholder="My Company Ltd" value="{{ old( 'name' ) }}" required />
 
    @if ( $errors->has( 'name' ) )
     {{ $errors->first( 'name' ) }}
@@ -29,7 +29,7 @@
 
   <div class="mt-4">
    <label for="email" class="block p-2 font-semibold">{{ __( 'Email' ) }}</label>
-   <input type="email" name="email" id="email" placeholder="info@mycompany.com" value="{{ old( 'email' ) }}" required />
+   <input type="email" name="email" id="email" class="appearance-none outline-none cursor-text block w-full leading-snug py-1 px-2 rounded border border-transparent bg-white shadow focus:shadow-md" placeholder="info@mycompany.com" value="{{ old( 'email' ) }}" required />
 
    @if ( $errors->has( 'email' ) )
     {{ $errors->first( 'email' ) }}
@@ -38,7 +38,7 @@
 
   <div class="mt-4">
    <label for="vat" class="block p-2 font-semibold">{{ __( 'Vat number' ) }}</label>
-   <input type="text" name="vat" id="vat" placeholder="IT123456789" value="{{ old( 'vat' ) }}" required />
+   <input type="text" name="vat" id="vat" class="appearance-none outline-none cursor-text block w-full leading-snug py-1 px-2 rounded border border-transparent bg-white shadow focus:shadow-md" placeholder="IT123456789" value="{{ old( 'vat' ) }}" required />
 
    @if ( $errors->has( 'vat' ) )
     {{ $errors->first( 'vat' ) }}
@@ -51,7 +51,7 @@
 
   <div>
    <label for="address_line1" class="block p-2 font-semibold">{{ __( 'Address' ) }}</label>
-   <input type="text" name="address_line1" id="address_line1" placeholder="Main address line" value="{{ old( 'address_line1' ) }}" required />
+   <input type="text" name="address_line1" id="address_line1" class="appearance-none outline-none cursor-text block w-full leading-snug py-1 px-2 rounded border border-transparent bg-white shadow focus:shadow-md" placeholder="Main address line" value="{{ old( 'address_line1' ) }}" required />
 
    @if ( $errors->has( 'address_line1' ) )
     {{ $errors->first( 'address_line1' ) }}
@@ -60,7 +60,7 @@
 
   <div class="mt-4">
    <label for="city" class="block p-2 font-semibold">{{ __( 'City' ) }}</label>
-   <input type="text" name="city" id="city" placeholder="City" value="{{ old( 'city' ) }}" required />
+   <input type="text" name="city" id="city" class="appearance-none outline-none cursor-text block w-full leading-snug py-1 px-2 rounded border border-transparent bg-white shadow focus:shadow-md" placeholder="City" value="{{ old( 'city' ) }}" required />
 
    @if ( $errors->has( 'city' ) )
     {{ $errors->first( 'city' ) }}
@@ -69,7 +69,7 @@
 
   <div class="mt-4">
    <label for="cap" class="block p-2 font-semibold">{{ __( 'Postal Code' ) }}</label>
-   <input type="text" name="cap" id="cap" placeholder="12345" value="{{ old( 'cap' ) }}" required />
+   <input type="text" name="cap" id="cap" class="appearance-none outline-none cursor-text block w-full leading-snug py-1 px-2 rounded border border-transparent bg-white shadow focus:shadow-md" placeholder="12345" value="{{ old( 'cap' ) }}" required />
 
    @if ( $errors->has( 'cap' ) )
     {{ $errors->first( 'cap' ) }}
