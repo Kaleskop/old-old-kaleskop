@@ -4,7 +4,7 @@
  <p>{{ $adv->title }}</p>
 
  <fieldset>
-  <legend>{{ __( 'Manifesto details' ) }}</legend>
+  <legend class="p-2 font-light italic">{{ __( 'Manifesto details' ) }}</legend>
 
   <div>
    <label for="videos" class="block p-2 font-semibold">{{ __( 'Videos' ) }}</label>
