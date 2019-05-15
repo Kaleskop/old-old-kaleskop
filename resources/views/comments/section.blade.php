@@ -1,4 +1,4 @@
-<section>
+<section class="p-2">
  <h4>{{ __( 'Comments' ) }}</h4>
 
  @auth
