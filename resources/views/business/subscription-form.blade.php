@@ -33,7 +33,7 @@
 
   <div class="mt-4">
    <label for="coupon" class="block p-2 font-semibold">{{ __( 'Coupon' ) }}</label>
-   <input type="text" name="coupon" id="coupon" />
+   <input type="text" name="coupon" id="coupon" class="appearance-none outline-none cursor-text block w-full leading-snug py-1 px-2 rounded border border-transparent bg-white shadow focus:shadow-md" />
 
    @if ( $errors->has( 'coupon' ) )
     {{ $errors->first( 'coupon' ) }}
