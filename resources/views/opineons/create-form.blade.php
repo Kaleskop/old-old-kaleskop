@@ -2,7 +2,7 @@
  @csrf
 
  <fieldset>
-  <legend>{{ __( 'Opineon' ) }}</legend>
+  <legend class="p-2 font-light italic hidden">{{ __( 'Opineon' ) }}</legend>
 
   <div>
    <label for="body" class="block p-2 font-semibold hidden">{{ __( 'Your opinion' ) }}</label>
