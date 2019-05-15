@@ -1,4 +1,4 @@
-<section>
+<section class="px-2 py-8">
  <h3>{{ __( 'Opineon' ) }}</h3>
 
  @if ( isset( $opineon ) && $opineon->exists() )
