@@ -6,7 +6,7 @@
 
   <div>
    <label for="name" class="block p-2 font-semibold">{{ __( 'Name' ) }}</label>
-   <input type="text" name="name" id="name" value="{{ old( 'name' ) }}" required autofocus />
+   <input type="text" name="name" id="name" class="appearance-none outline-none cursor-text block w-full leading-snug py-1 px-2 rounded border border-transparent bg-white shadow focus:shadow-md" value="{{ old( 'name' ) }}" required autofocus />
 
    @if ( $errors->has( 'name' ) )
     {{ $errors->first( 'name' ) }}
