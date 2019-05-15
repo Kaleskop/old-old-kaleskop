@@ -5,7 +5,7 @@
   <legend>{{ __( 'Opineon' ) }}</legend>
 
   <div>
-   <label for="body">{{ __( 'Your opinion' ) }}</label>
+   <label for="body" class="block p-2 font-semibold hidden">{{ __( 'Your opinion' ) }}</label>
    <textarea name="body" id="body" placeholder="I think.." required>{{ old( 'body' ) }}</textarea>
 
    @if ( $errors->has( 'body' ) )
