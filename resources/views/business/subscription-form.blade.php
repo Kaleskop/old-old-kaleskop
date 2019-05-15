@@ -2,7 +2,7 @@
  @csrf
 
  <fieldset>
-  <legend>{{ __( 'Subscription details' ) }}</legend>
+  <legend class="p-2 font-light italic">{{ __( 'Subscription details' ) }}</legend>
 
   <div>
    <label class="block p-2 font-semibold">{{ __( 'Choose plan' ) }}</label>
@@ -42,7 +42,7 @@
  </fieldset>
 
  <fieldset>
-  <legend>{{ __( 'Payment details' ) }}</legend>
+  <legend class="p-2 font-light italic">{{ __( 'Payment details' ) }}</legend>
 
   <div>
    <label for="card-element" class="block p-2 font-semibold">{{ __( 'Credit or debit card' ) }}</label>
@@ -53,7 +53,7 @@
  </fieldset>
 
  <fieldset>
-  <legend>{{ __( 'Terms & Conditions' ) }}</legend>
+  <legend class="p-2 font-light italic">{{ __( 'Terms & Conditions' ) }}</legend>
 
   <div>
    <input type="checkbox" name="terms" id="terms" value="true" />
