@@ -18,7 +18,7 @@
 
   <title>{{ config( 'app.name' ) }}{{ isset( $title ) ? " | {$title}" : '' }}</title>
  </head>
- <body>
+ <body class="leading-normal font-normal text-left text-base text-gray-900">
   <div id="kaleskop">
    @yield( 'body' )
 
