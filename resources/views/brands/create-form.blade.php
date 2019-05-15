@@ -13,7 +13,7 @@
    @endif
   </div>
 
-  <div>
+  <div class="mt-4">
    <label for="description" class="block p-2 font-semibold">{{ __( 'Description' ) }}</label>
    <textarea name="description" id="description">{{ old( 'description' ) }}</textarea>
 
@@ -22,7 +22,7 @@
    @endif
   </div>
 
-  <div>
+  <div class="mt-4">
    <label for="userfile" class="block p-2 font-semibold">{{ __( 'Choose Logo' ) }}</label>
    <input type="file" name="userfile" accept="image/*" id="userfile" />
 
