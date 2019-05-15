@@ -6,7 +6,7 @@
 
  @endauth
 
- <div>
+ <div class="flex flex-col">
   @forelse( $comments as $comment )
    @include( 'comments.tile' )
 
