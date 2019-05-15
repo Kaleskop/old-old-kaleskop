@@ -8,7 +8,7 @@
 
   <div>
    <label for="videos" class="block p-2 font-semibold">{{ __( 'Videos' ) }}</label>
-   <select name="videos[]" id="videos" multiple>
+   <select name="videos[]" id="videos" class="appearance-none outline-none cursor-pointer block w-full leading-snug py-1 px-2 border border-transparent bg-white shadow focus:shadow-md" multiple>
     @foreach( $videos as $video )
      <option value="{{ $video->id }}"{{ in_array( $video->id, $adv->videos()->pluck( 'id' )->toArray()) ? ' selected' : '' }}>{{ $video->name }}</option>
 
