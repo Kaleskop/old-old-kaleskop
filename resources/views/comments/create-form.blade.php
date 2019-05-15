@@ -5,7 +5,7 @@
   <legend>{{ __( 'Comment details' ) }}</legend>
 
   <div>
-   <label for="body">{{ __( 'Body' ) }}</label>
+   <label for="body" class="block p-2 font-semibold hidden">{{ __( 'Body' ) }}</label>
    <textarea name="body" id="body" required>{{ old( 'body' ) }}</textarea>
   </div>
  </fieldset>
