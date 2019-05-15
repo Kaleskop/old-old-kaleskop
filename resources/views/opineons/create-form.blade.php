@@ -14,5 +14,5 @@
   </div>
  </fieldset>
 
- <button type="submit">{{ __( 'Publish' ) }}</button>
+ <button type="submit" class="appearance-none outline-none cursor-pointer select-none block leading-snug p-2 ml-auto border border-transparent font-medium text-center focus:shadow-md">{{ __( 'Publish' ) }}</button>
 </form>
