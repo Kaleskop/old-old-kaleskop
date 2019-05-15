@@ -1,4 +1,4 @@
-<nav>
+<nav class="py-4 flex justify-around">
 
  @auth
  <a href="{{ route( 'account.index' ) }}" class="w-8 h-8 inline-flex items-center justify-center border border-transparent rounded-full bg-grey-300 active:bg-kaleskop-gold">
