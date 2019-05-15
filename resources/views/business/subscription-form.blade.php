@@ -31,7 +31,7 @@
    @endif
   </div>
 
-  <div>
+  <div class="mt-4">
    <label for="coupon" class="block p-2 font-semibold">{{ __( 'Coupon' ) }}</label>
    <input type="text" name="coupon" id="coupon" />
 
