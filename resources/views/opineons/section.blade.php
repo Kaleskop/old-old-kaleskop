@@ -12,7 +12,7 @@
  @endif
 
  @isset( $opinions )
- <div>
+ <div class="mt-8 flex flex-col">
   @forelse( $opinions as $opinion )
    @include( 'opineons.feed' )
 
