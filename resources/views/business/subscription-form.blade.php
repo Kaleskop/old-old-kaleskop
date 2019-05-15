@@ -1,7 +1,7 @@
 <form action="{{ route( 'plans.subscribe' ) }}" method="POST" id="checkout-form">
  @csrf
 
- <fieldset>
+ <fieldset class="mb-8">
   <legend class="p-2 font-light italic">{{ __( 'Subscription details' ) }}</legend>
 
   <div>
@@ -41,7 +41,7 @@
   </div>
  </fieldset>
 
- <fieldset>
+ <fieldset class="mb-8">
   <legend class="p-2 font-light italic">{{ __( 'Payment details' ) }}</legend>
 
   <div>
@@ -52,7 +52,7 @@
   </div>
  </fieldset>
 
- <fieldset>
+ <fieldset class="mb-8">
   <legend class="p-2 font-light italic">{{ __( 'Terms & Conditions' ) }}</legend>
 
   <div>
