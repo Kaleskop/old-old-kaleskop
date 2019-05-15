@@ -5,7 +5,7 @@
   <legend>{{ __( 'Subscription details' ) }}</legend>
 
   <div>
-   <label>{{ __( 'Choose plan' ) }}</label>
+   <label class="block p-2 font-semibold">{{ __( 'Choose plan' ) }}</label>
 
    <div>
     @forelse( $plans as $plan )
@@ -32,7 +32,7 @@
   </div>
 
   <div>
-   <label for="coupon">{{ __( 'Coupon' ) }}</label>
+   <label for="coupon" class="block p-2 font-semibold">{{ __( 'Coupon' ) }}</label>
    <input type="text" name="coupon" id="coupon" />
 
    @if ( $errors->has( 'coupon' ) )
@@ -45,7 +45,7 @@
   <legend>{{ __( 'Payment details' ) }}</legend>
 
   <div>
-   <label for="card-element">{{ __( 'Credit or debit card' ) }}</label>
+   <label for="card-element" class="block p-2 font-semibold">{{ __( 'Credit or debit card' ) }}</label>
    <div id="card-element"></div>
    <div id="card-errors" role="alert"></div>
    <input type="hidden" name="stripeToken" />
