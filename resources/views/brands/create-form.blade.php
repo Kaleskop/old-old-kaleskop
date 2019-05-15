@@ -1,7 +1,7 @@
 <form method="POST"  enctype="multipart/form-data" action="{{ route( 'brands.store' ) }}">
  @csrf
 
- <fieldset>
+ <fieldset class="mb-8">
   <legend class="p-2 font-light italic">{{ __( 'Brand details' ) }}</legend>
 
   <div>
