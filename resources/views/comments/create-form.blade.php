@@ -6,7 +6,7 @@
 
   <div>
    <label for="body" class="block p-2 font-semibold hidden">{{ __( 'Body' ) }}</label>
-   <textarea name="body" id="body" required>{{ old( 'body' ) }}</textarea>
+   <textarea name="body" id="body" class="appearance-none outline-none cursor-text block resize-y w-full leading-snug py-1 px-2 border border-transparent bg-white shadow focus:shadow-md" required>{{ old( 'body' ) }}</textarea>
   </div>
  </fieldset>
 
