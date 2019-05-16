@@ -2,7 +2,7 @@
 
 @section( 'page' )
 <section class="px-4 py-8">
- <header>
+ <header class="mb-4">
   <h2>{{ __( 'Advertisements' ) }}</h2>
 
   <a href="{{ route( 'advs.create' ) }}">{{ __( 'New advertisement' ) }}</a>
