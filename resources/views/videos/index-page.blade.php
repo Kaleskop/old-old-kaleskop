@@ -5,7 +5,7 @@
  <header class="mb-4">
   <h2>{{ __( 'Videos' ) }}</h2>
 
-  <a href="{{ route( 'videos.create' ) }}">{{ __( 'New Video' ) }}</a>
+  <a href="{{ route( 'videos.create' ) }}" class="underline">{{ __( 'New Video' ) }}</a>
  </header>
 
  @include( 'videos.table' )
