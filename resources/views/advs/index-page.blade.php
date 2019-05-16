@@ -5,7 +5,7 @@
  <header class="mb-4">
   <h2>{{ __( 'Advertisements' ) }}</h2>
 
-  <a href="{{ route( 'advs.create' ) }}">{{ __( 'New advertisement' ) }}</a>
+  <a href="{{ route( 'advs.create' ) }}" class="underline">{{ __( 'New advertisement' ) }}</a>
  </header>
 
  <div>

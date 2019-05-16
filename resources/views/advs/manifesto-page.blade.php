@@ -10,7 +10,7 @@
   @include( 'advs.manifesto-form' )
 
  @else
-  <p>{{ __( 'You need to' ) }} <a href="{{ route( 'videos.create' ) }}">{{ __( 'insert a new video' ) }}</a></p>
+  <p>{{ __( 'You need to' ) }} <a href="{{ route( 'videos.create' ) }}" class="underline">{{ __( 'insert a new video' ) }}</a></p>
 
  @endif
 
