@@ -6,7 +6,7 @@
 
   <div>
    <label for="name" class="block p-2 font-semibold">{{ __( 'Name' ) }}</label>
-   <input type="text" name="name" id="name" value="{{ old( 'name' ) }}" required autofocus />
+   <input type="text" name="name" id="name" class="appearance-none outline-none cursor-text block w-full leading-snug py-1 px-2 rounded border border-transparent bg-white shadow focus:shadow-md" value="{{ old( 'name' ) }}" required autofocus />
 
    @if ( $errors->has( 'name' ) )
     {{ $errors->first( 'name' ) }}
@@ -15,7 +15,7 @@
 
   <div class="mt-4">
    <label for="email" class="block p-2 font-semibold">{{ __( 'Email address' ) }}</label>
-   <input type="email" name="email" id="email" required />
+   <input type="email" name="email" id="email" class="appearance-none outline-none cursor-text block w-full leading-snug py-1 px-2 rounded border border-transparent bg-white shadow focus:shadow-md" required />
 
    @if ( $errors->has( 'email' ) )
     {{ $errors->first( 'email' ) }}
@@ -24,7 +24,7 @@
 
   <div class="mt-4">
    <label for="password" class="block p-2 font-semibold">{{ __( 'Password' ) }}</label>
-   <input type="password" name="password" id="password" required />
+   <input type="password" name="password" id="password" class="appearance-none outline-none cursor-text block w-full leading-snug py-1 px-2 rounded border border-transparent bg-white shadow focus:shadow-md" required />
 
    @if ( $errors->has( 'password' ) )
     {{ $errors->first( 'password' ) }}
@@ -33,7 +33,7 @@
 
   <div class="mt-4">
    <label for="password_confirmation" class="block p-2 font-semibold">{{ __( 'Confirm password' ) }}</label>
-   <input type="password" name="password_confirmation" id="password_confirmation" required />
+   <input type="password" name="password_confirmation" id="password_confirmation" class="appearance-none outline-none cursor-text block w-full leading-snug py-1 px-2 rounded border border-transparent bg-white shadow focus:shadow-md" required />
   </div>
  </fieldset>
 
