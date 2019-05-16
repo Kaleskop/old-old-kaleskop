@@ -8,7 +8,7 @@
   <a href="{{ route( 'brands.create' ) }}" class="underline">{{ __( 'New brand' ) }}</a>
  </header>
 
- <div>
+ <div class="flex flex-col">
   @forelse( $brands as $brand )
    @include( 'brands.tile' )
 
