@@ -8,7 +8,9 @@
  </header>
 
  @if ( session('resent') )
-  <p>{{ __( 'A fresh verification link has been sent to your email address.' ) }}</p>
+  <div class="my-4 p-2 font-light bg-green-200 text-green-800">
+   <p>{{ __( 'A fresh verification link has been sent to your email address.' ) }}</p>
+  </div>
  @endif
 
  <p class="mb-4">{{ __( 'Before proceeding, please check your email for a verification link.' ) }}</p>
