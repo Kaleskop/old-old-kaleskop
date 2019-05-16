@@ -11,7 +11,7 @@
   <p>{{ __( 'A fresh verification link has been sent to your email address.' ) }}</p>
  @endif
 
- <p>{{ __( 'Before proceeding, please check your email for a verification link.' ) }}</p>
+ <p class="mb-4">{{ __( 'Before proceeding, please check your email for a verification link.' ) }}</p>
  <p><a href="{{ route( 'verification.resend' ) }}" class="underline">{{ __( 'click here to request another email' ) }}</a></p>
 </section>
 
