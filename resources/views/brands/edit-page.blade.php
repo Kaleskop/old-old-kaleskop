@@ -1,7 +1,7 @@
 @extends( 'layouts.page' )
 
 @section( 'page' )
-<section>
+<section class="px-4 py-8">
  <header>
   <h2>{{ __( 'Edit Brand' ) }}</h2>
   <p>{{ $brand->name }}</p>
