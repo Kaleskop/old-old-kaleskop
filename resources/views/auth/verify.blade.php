@@ -1,7 +1,7 @@
 @extends( 'layouts.layout' )
 
 @section( 'body' )
-<section>
+<section class="px-8 py-16">
  <header>
   <h2>{{ __( 'Verify your email address' ) }}</h2>
   <p>{{ config( 'app.name' ) }}</p>
