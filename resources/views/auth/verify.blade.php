@@ -12,7 +12,7 @@
  @endif
 
  <p>{{ __( 'Before proceeding, please check your email for a verification link.' ) }}</p>
- <p><a href="{{ route( 'verification.resend' ) }}">{{ __( 'click here to request another email' ) }}</a></p>
+ <p><a href="{{ route( 'verification.resend' ) }}" class="underline">{{ __( 'click here to request another email' ) }}</a></p>
 </section>
 
 @endsection

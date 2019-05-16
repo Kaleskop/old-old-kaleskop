@@ -7,11 +7,11 @@
   <p>{{ config( 'app.name' ) }}</p>
  </header>
 
- <p>{{ __( "Don't have a account?" ) }} <a href="{{ route( 'register' ) }}">{{ __( 'Create One' ) }}</a></p>
+ <p>{{ __( "Don't have a account?" ) }} <a href="{{ route( 'register' ) }}" class="underline">{{ __( 'Create One' ) }}</a></p>
 
  @include( 'auth.login-form' )
 
- <p><a href="{{ route( 'password.request' ) }}">{{ __( 'Forgot Password?' ) }}</a></p>
+ <p><a href="{{ route( 'password.request' ) }}" class="underline">{{ __( 'Forgot Password?' ) }}</a></p>
 </section>
 
 @endsection
