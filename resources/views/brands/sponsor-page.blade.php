@@ -10,7 +10,7 @@
   @include( 'brands.sponsor-form' )
 
  @else
-  <p>{{ __( 'You need to' ) }} <a href="{{ route( 'advs.create' ) }}">{{ __( 'insert a new advertisement' ) }}</a></p>
+  <p>{{ __( 'You need to' ) }} <a href="{{ route( 'advs.create' ) }}" class="underline">{{ __( 'insert a new advertisement' ) }}</a></p>
 
  @endif
 
