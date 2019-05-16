@@ -2,7 +2,7 @@
 
 @section( 'body' )
 <section class="px-8 py-16">
- <header>
+ <header class="mb-4 text-center">
   <h2>{{ __( 'New Account' ) }}</h2>
   <p>{{ config( 'app.name' ) }}</p>
  </header>
