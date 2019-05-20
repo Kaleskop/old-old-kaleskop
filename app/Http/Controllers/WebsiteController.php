@@ -31,8 +31,8 @@ class WebsiteController extends Controller {
  }
 
  public function advs( Brand $brand, Adv $adv = null ) {
-  $opinions = $adv->opinions;
-  $opineon = Auth::check() ? Auth::user()->opinionOn( $adv ) : null;
+  $opinions = $adv->opinions()->withCount( 'comments' )->get();
+  $opineon = Auth::check() ? Auth::user()->opinionOn( $adv )->withCount( 'comments' ) : null;
 
   return view( 'layouts.wrapper', [ 'page'=>'website.advs-page' ] )
    ->with( 'brand', $brand )
