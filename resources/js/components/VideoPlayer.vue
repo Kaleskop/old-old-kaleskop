@@ -1,7 +1,7 @@
 <template>
 
 <div>
- <video class="video-js" ref="video"></video>
+ <video class="video-js " ref="video"></video>
 </div>
 
 </template>
@@ -78,6 +78,7 @@ export default {
 
    this.player = videojs(this.$refs.video, videoOptions);
    this.player.src(this.getSources());
+   this.player.addClass('vjs-kaleskop');
   },
 
   getSources() {
