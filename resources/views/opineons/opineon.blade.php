@@ -7,6 +7,10 @@
   </div>
  </div>
 
+ <footer>
+  <small>{{ __( ':count comments', [ 'count'=>$opineon->comments_count ] ) }}</small>
+ </footer>
+
  @include( 'comments.section', [ 'opinion'=>$opineon, 'comments'=>$opineon->comments ] )
 
 </article>
