@@ -79,6 +79,7 @@ export default {
    this.player = videojs(this.$refs.video, videoOptions);
    this.player.src(this.getSources());
    this.player.addClass('vjs-kaleskop');
+   this.player.addClass('vjs-16-9');
   },
 
   getSources() {
