@@ -16,7 +16,7 @@
        <span>{{ $plan->price }}</span>
       </label>
       <span>{{ $plan->name }}</span>
-      <span>{{ Illuminate\Mail\Markdown::parse( $plan->description ) }}</span>
+      <div>{{ Illuminate\Mail\Markdown::parse( $plan->description ) }}</div>
      </div>
     </div>
 
