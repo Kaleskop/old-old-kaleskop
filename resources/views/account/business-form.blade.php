@@ -68,7 +68,7 @@
   </div>
 
   <div>
-   <label for="cap">{{ __( 'CAP' ) }}</label>
+   <label for="cap">{{ __( 'Postal Code' ) }}</label>
    <input type="text" name="cap" id="cap" value="{{ old( 'cap' ) }}" required />
 
    @if ( $errors->has( 'cap' ) )
