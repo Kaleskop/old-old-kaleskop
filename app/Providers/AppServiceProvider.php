@@ -23,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
         Blade::if( 'subscribed', function() {
            return Auth::check()
             && Auth::user()->hasBusiness()
-            && Auth::user()->business->subscribed( 'Subscriptions' );
+            && Auth::user()->business->subscribed( 'Storage' );
         } );
     }
 
