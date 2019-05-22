@@ -12,7 +12,7 @@ class BusinessController extends Controller {
 
  public function __construct() {
   $this->middleware( 'auth' );
-  $this->middleware( 'business' )->only( 'index' );
+  $this->middleware( 'business' )->only( [ 'index', 'subscriptions' ] );
  }
 
  public function store( Request $request ) {
