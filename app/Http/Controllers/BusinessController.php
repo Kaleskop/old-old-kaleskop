@@ -29,7 +29,7 @@ class BusinessController extends Controller {
 
   $business = $request->user()->business()->create( $request->all() );
 
-  return back();
+  return redirect()->route( 'business.index' );
  }
 
  // - view actions
