@@ -65,7 +65,7 @@ class PlansController extends Controller {
 
   $business = $request->user()->business;
 
-  $subscription = $business->newSubscription( 'Subscriptions', $request->plan );
+  $subscription = $business->newSubscription( 'Storage', $request->plan );
   if ( $request->has( 'coupon' ) && !empty( $request->coupon ) ) {
    $subscription->withCoupon( $request->coupon );
   }

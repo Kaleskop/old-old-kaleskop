@@ -60,7 +60,7 @@
 
   <div>
    <label for="city">{{ __( 'City' ) }}</label>
-   <input type="text" name="city" id="city" placeholder="" value="{{ old( 'city' ) }}" required />
+   <input type="text" name="city" id="city" placeholder="City" value="{{ old( 'city' ) }}" required />
 
    @if ( $errors->has( 'city' ) )
     {{ $errors->first( 'city' ) }}
@@ -68,8 +68,8 @@
   </div>
 
   <div>
-   <label for="cap">{{ __( 'CAP' ) }}</label>
-   <input type="text" name="cap" id="cap" value="{{ old( 'cap' ) }}" required />
+   <label for="cap">{{ __( 'Postal Code' ) }}</label>
+   <input type="text" name="cap" id="cap" placeholder="12345" value="{{ old( 'cap' ) }}" required />
 
    @if ( $errors->has( 'cap' ) )
     {{ $errors->first( 'cap' ) }}
