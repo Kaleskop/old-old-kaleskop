@@ -7,7 +7,7 @@
   </div>
  </div>
 
- <footer>
+ <footer class="flex">
   <small>{{ __( ':count comments', [ 'count'=>$opinion->comments_count ] ) }}</small>
  </footer>
 

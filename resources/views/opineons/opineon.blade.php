@@ -7,7 +7,7 @@
   </div>
  </div>
 
- <footer>
+ <footer class="flex">
   <small>{{ __( ':count comments', [ 'count'=>$opineon->comments_count ] ) }}</small>
  </footer>
 
