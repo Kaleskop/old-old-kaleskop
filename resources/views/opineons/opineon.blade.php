@@ -1,4 +1,4 @@
-<article>
+<article class="pl-2 pr-4">
  <div class="relative py-4 flex">
   <figure><!-- user picture here --></figure>
   
