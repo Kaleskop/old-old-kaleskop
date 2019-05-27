@@ -8,7 +8,7 @@
  </div>
 
  <footer class="flex">
-  <small>{{ __( ':count comments', [ 'count'=>$opineon->comments_count ] ) }}</small>
+  <small class="ml-auto">{{ __( ':count comments', [ 'count'=>$opineon->comments_count ] ) }}</small>
  </footer>
 
  @include( 'comments.section', [ 'opinion'=>$opineon, 'comments'=>$opineon->comments ] )
