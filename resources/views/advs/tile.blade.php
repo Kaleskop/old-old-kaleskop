@@ -3,7 +3,7 @@
 
  <p>{{ $adv->endpoint }}</p>
 
- <footer>
+ <footer class="flex justify-end">
   <a href="{{ route( 'advs.sponsor', $adv ) }}" class="underline mr-4">{{ __( 'Sponsor' ) }}</a>
   <a href="{{ route( 'advs.manifesto', $adv ) }}" class="underline">{{ __( 'Manifesto' ) }}</a>
  </footer>
