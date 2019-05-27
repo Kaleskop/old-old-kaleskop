@@ -3,7 +3,7 @@
 @section( 'page' )
 <section>
  <header>
-  <h2>{{ __( 'Channels' ) }}</h2>
+  <h2 class="mb-2 font-medium text-3xl">{{ __( 'Channels' ) }}</h2>
  </header>
 
  <div>

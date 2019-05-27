@@ -6,7 +6,7 @@
   <video-player v-bind:adv="{{ $adv }}"></video-player>
 
   <header>
-   <h2>{{ $adv->title }}</h2>
+   <h2 class="mb-2 font-semibold text-2xl">{{ $adv->title }}</h2>
 
    <a href="{{ route( 'website.endpoint', $adv ) }}"><span class="fas fa-external-link-square-alt"></span></a>
   </header>
