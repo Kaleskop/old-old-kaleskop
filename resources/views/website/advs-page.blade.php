@@ -12,7 +12,7 @@
   </header>
  </div>
 
- <div>
+ <div class="flex flex-col">
   @foreach( $adv->brands as $brand )
    @include( 'brands.tile-on-channels' )
 

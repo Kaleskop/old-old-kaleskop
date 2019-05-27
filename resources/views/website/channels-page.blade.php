@@ -6,7 +6,7 @@
   <h2 class="mb-2 font-medium text-3xl">{{ __( 'Channels' ) }}</h2>
  </header>
 
- <div>
+ <div class="flex flex-col">
   @forelse( $advs as $adv )
    @include( 'advs.tile-on-channels' )
 
