@@ -1,5 +1,5 @@
 <article>
- <div>
+ <div class="relative py-4 flex">
   <figure><!-- user picture here --></figure>
   
   <div class="p-2 flex-1">
