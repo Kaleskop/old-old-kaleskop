@@ -9,7 +9,7 @@
 
    <p>{{ Illuminate\Mail\Markdown::parse( $brand->description ) }}</p>
 
-   <footer>
+   <footer class="p-2 flex justify-end">
     @subscribed
      <a href="{{ route( 'brands.sponsor', $brand ) }}" class="underline">{{ __( 'Sponsor' ) }}</a>
 
