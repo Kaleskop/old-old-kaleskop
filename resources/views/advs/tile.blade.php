@@ -4,7 +4,7 @@
  <p>{{ $adv->endpoint }}</p>
 
  <footer>
-  <a href="{{ route( 'advs.sponsor', $adv ) }}">{{ __( 'Sponsor' ) }}</a>
-  <a href="{{ route( 'advs.manifesto', $adv ) }}">{{ __( 'Manifesto' ) }}</a>
+  <a href="{{ route( 'advs.sponsor', $adv ) }}" class="underline mr-4">{{ __( 'Sponsor' ) }}</a>
+  <a href="{{ route( 'advs.manifesto', $adv ) }}" class="underline">{{ __( 'Manifesto' ) }}</a>
  </footer>
 </article>
