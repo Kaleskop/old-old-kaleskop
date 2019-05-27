@@ -1,31 +1,31 @@
-<nav>
+<nav class="py-4 flex justify-around">
 
  @auth
- <a href="{{ route( 'account.index' ) }}">
+ <a href="{{ route( 'account.index' ) }}" class="w-8 h-8 inline-flex items-center justify-center border border-transparent rounded-full bg-grey-300 active:bg-kaleskop-gold">
   <span class="far fa-user"></span>
-  <span>{{ __( 'Account' ) }}</span>
+  <span class="hidden">{{ __( 'Account' ) }}</span>
  </a>
- <a href="{{ route( 'business.index' ) }}">
+ <a href="{{ route( 'business.index' ) }}" class="w-8 h-8 inline-flex items-center justify-center border border-transparent rounded-full bg-grey-300 active:bg-kaleskop-gold">
   <span class="far fa-building"></span>
-  <span>{{ __( 'Business' ) }}</span>
+  <span class="hidden">{{ __( 'Business' ) }}</span>
  </a>
  @endauth
 
  @business
- <a href="{{ route( 'brands.index' ) }}">
+ <a href="{{ route( 'brands.index' ) }}" class="w-8 h-8 inline-flex items-center justify-center border border-transparent rounded-full bg-grey-300 active:bg-kaleskop-gold">
   <span class="fas fa-tags"></span>
-  <span>{{ __( 'Brands' ) }}</span>
+  <span class="hidden">{{ __( 'Brands' ) }}</span>
  </a>
- <a href="{{ route( 'advs.index' ) }}">
+ <a href="{{ route( 'advs.index' ) }}" class="w-8 h-8 inline-flex items-center justify-center border border-transparent rounded-full bg-grey-300 active:bg-kaleskop-gold">
   <span class="fas fa-play"></span>
-  <span>{{ __( 'Advertisements' ) }}</span>
+  <span class="hidden">{{ __( 'Advertisements' ) }}</span>
  </a>
  @endbusiness
 
  @subscribed
- <a href="{{ route( 'videos.index' ) }}">
+ <a href="{{ route( 'videos.index' ) }}" class="w-8 h-8 inline-flex items-center justify-center border border-transparent rounded-full bg-grey-300 active:bg-kaleskop-gold">
   <span class="fas fa-film"></span>
-  <span>{{ __( 'Videos' ) }}</span>
+  <span class="hidden">{{ __( 'Videos' ) }}</span>
  </a>
  @endsubscribed
 
