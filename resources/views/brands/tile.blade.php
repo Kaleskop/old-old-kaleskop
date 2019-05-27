@@ -11,7 +11,7 @@
 
    <footer>
     @subscribed
-     <a href="{{ route( 'brands.sponsor', $brand ) }}">{{ __( 'Sponsor' ) }}</a>
+     <a href="{{ route( 'brands.sponsor', $brand ) }}" class="underline">{{ __( 'Sponsor' ) }}</a>
 
     @endsubscribed
    </footer>
