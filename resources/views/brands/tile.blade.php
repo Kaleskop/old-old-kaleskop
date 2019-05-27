@@ -5,7 +5,7 @@
   </figure>
 
   <article>
-   <h4>{{ $brand->name }}</h4>
+   <h4 class="mb-2 font-medium text-2xl">{{ $brand->name }}</h4>
 
    <p>{{ Illuminate\Mail\Markdown::parse( $brand->description ) }}</p>
 
