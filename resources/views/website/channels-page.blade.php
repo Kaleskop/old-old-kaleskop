@@ -2,7 +2,7 @@
 
 @section( 'page' )
 <section>
- <header>
+ <header class="mb-4 px-2">
   <h2 class="mb-2 font-medium text-3xl">{{ __( 'Channels' ) }}</h2>
  </header>
 
