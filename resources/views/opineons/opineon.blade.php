@@ -1,4 +1,4 @@
-<article class="pl-2 pr-4">
+<article class="pl-2 pr-4 border-l-2 border-kaleskop-gold">
  <div class="relative py-4 flex">
   <figure class="w-8 h-8 mr-2 rounded-full"><!-- user picture here --></figure>
   
