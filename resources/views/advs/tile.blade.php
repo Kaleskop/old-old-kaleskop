@@ -1,5 +1,5 @@
 <article>
- <h4>{{ $adv->title }}</h4>
+ <h4 class="mb-2 font-medium text-2xl">{{ $adv->title }}</h4>
 
  <p>{{ $adv->endpoint }}</p>
 
