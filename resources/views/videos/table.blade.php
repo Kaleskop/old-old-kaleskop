@@ -1,10 +1,10 @@
-<table>
+<table class="relative overflow-hidden w-full bg-white">
  <thead>
   <tr>
-   <th scope="col">{{ __( 'Name' ) }}</th>
-   <th scope="col">{{ __( 'Type' ) }}</th>
-   <th scope="col">{{ __( 'Size' ) }}</th>
-   <th scope="col">{{ __( 'Actions' ) }}</th>
+   <th scope="col" class="p-2 font-semibold text-left">{{ __( 'Name' ) }}</th>
+   <th scope="col" class="p-2 font-semibold text-left">{{ __( 'Type' ) }}</th>
+   <th scope="col" class="p-2 font-semibold text-left">{{ __( 'Size' ) }}</th>
+   <th scope="col" class="p-2 font-semibold text-left">{{ __( 'Actions' ) }}</th>
   </tr>
  </thead>
  <tbody>
@@ -16,7 +16,7 @@
    <td>{{ $video->size }}</td>
    <td>
     <div>
-     <a href="{{ route( 'videos.manifesto', $video ) }}">{{ __( 'Manifesto' ) }}</a>
+     <a href="{{ route( 'videos.manifesto', $video ) }}" class="underline">{{ __( 'Manifesto' ) }}</a>
     </div>
 
     @include( 'videos.delete-form' )
