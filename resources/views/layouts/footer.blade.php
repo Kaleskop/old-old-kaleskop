@@ -38,7 +38,7 @@
    <small>{{ __( 'Built by' ) }} <a href="https://andreagiuseppe.com" class="underline">AndreaGiuseppe</a>.</small>
   </div>
   
-  <div>
+  <div class="p-2 flex justify-between">
    <a href="https://twitter.com/kaleskopadv" class="underline">Twitter</a> <a href="https://github.com/Kaleskop" class="underline">Github</a>
   </div>
  </div>
