@@ -1,18 +1,20 @@
 @extends( 'layouts.layout' )
 
 @section( 'body' )
-<section>
- <header>
-  <h2>{{ __( 'Verify your email address' ) }}</h2>
-  <p>{{ config( 'app.name' ) }}</p>
+<section class="px-8 py-16">
+ <header class="mb-4 text-center">
+  <h2 class="mb-2 font-medium text-3xl">{{ __( 'Verify your email address' ) }}</h2>
+  <p class="font-semibold text-2xl uppercase">{{ config( 'app.name' ) }}</p>
  </header>
 
  @if ( session('resent') )
-  <p>{{ __( 'A fresh verification link has been sent to your email address.' ) }}</p>
+  <div class="my-4 p-2 font-light bg-green-200 text-green-800">
+   <p>{{ __( 'A fresh verification link has been sent to your email address.' ) }}</p>
+  </div>
  @endif
 
- <p>{{ __( 'Before proceeding, please check your email for a verification link.' ) }}</p>
- <p><a href="{{ route( 'verification.resend' ) }}">{{ __( 'click here to request another email' ) }}</a></p>
+ <p class="mb-4">{{ __( 'Before proceeding, please check your email for a verification link.' ) }}</p>
+ <p><a href="{{ route( 'verification.resend' ) }}" class="underline">{{ __( 'click here to request another email' ) }}</a></p>
 </section>
 
 @endsection
