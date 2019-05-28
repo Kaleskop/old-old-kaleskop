@@ -1,4 +1,4 @@
-<footer>
+<footer class="pt-16">
  <div>
   <div>
    <a href="{{ route( 'website.homepage' ) }}">
