@@ -1,12 +1,12 @@
-<section>
- <h4>{{ __( 'Comments' ) }}</h4>
+<section class="p-2">
+ <h4 class="mb-2 font-medium text-sm text-gray-800 uppercase">{{ __( 'Comments' ) }}</h4>
 
  @auth
   @include( 'comments.create-form' )
 
  @endauth
 
- <div>
+ <div class="flex flex-col">
   @forelse( $comments as $comment )
    @include( 'comments.tile' )
 
