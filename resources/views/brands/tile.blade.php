@@ -1,17 +1,17 @@
 <div>
  <div>
   <figure>
-   <img src="{{ asset( 'storage/'.$brand->logo_path ) }}" />
+   <img src="{{ asset( 'storage/'.$brand->logo_path ) }}" class="w-full" />
   </figure>
 
   <article>
-   <h4>{{ $brand->name }}</h4>
+   <h4 class="mb-2 font-medium text-2xl">{{ $brand->name }}</h4>
 
    <p>{{ Illuminate\Mail\Markdown::parse( $brand->description ) }}</p>
 
-   <footer>
+   <footer class="p-2 flex justify-end">
     @subscribed
-     <a href="{{ route( 'brands.sponsor', $brand ) }}">{{ __( 'Sponsor' ) }}</a>
+     <a href="{{ route( 'brands.sponsor', $brand ) }}" class="underline">{{ __( 'Sponsor' ) }}</a>
 
     @endsubscribed
    </footer>
