@@ -30,7 +30,7 @@
  </div>
 
  <div>
-  <div>
+  <div class="py-4">
    <a href="{{ route( 'website.homepage' ) }}">
     <img src="" />
    </a>
