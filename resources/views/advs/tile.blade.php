@@ -1,10 +1,10 @@
 <article>
- <h4>{{ $adv->title }}</h4>
+ <h4 class="mb-2 font-medium text-2xl">{{ $adv->title }}</h4>
 
- <p>{{ $adv->endpoint }}</p>
+ <p class="mb-4 font-light text-sm">{{ $adv->endpoint }}</p>
 
- <footer>
-  <a href="{{ route( 'advs.sponsor', $adv ) }}">{{ __( 'Sponsor' ) }}</a>
-  <a href="{{ route( 'advs.manifesto', $adv ) }}">{{ __( 'Manifesto' ) }}</a>
+ <footer class="flex justify-end">
+  <a href="{{ route( 'advs.sponsor', $adv ) }}" class="underline mr-4">{{ __( 'Sponsor' ) }}</a>
+  <a href="{{ route( 'advs.manifesto', $adv ) }}" class="underline">{{ __( 'Manifesto' ) }}</a>
  </footer>
 </article>
