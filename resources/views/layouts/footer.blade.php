@@ -12,7 +12,7 @@
   </div>
  </div>
 
- <div>
+ <div class="flex justify-around">
   <div>
    <h4 class="mb-2 font-medium text-xl">{{ __( 'Resources' ) }}</h4>
    <p><a href="" class="underline">{{ __( 'Pricing' ) }}</a></p>
