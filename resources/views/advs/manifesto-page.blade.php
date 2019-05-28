@@ -1,16 +1,16 @@
 @extends( 'layouts.page' )
 
 @section( 'page' )
-<section>
- <header>
-  <h2>{{ __( 'New manifesto' ) }}</h2>
+<section class="px-4 py-8">
+ <header class="mb-4">
+  <h2 class="mb-2 font-medium text-3xl">{{ __( 'New manifesto' ) }}</h2>
  </header>
 
  @if ( count( $videos ) > 0 )
   @include( 'advs.manifesto-form' )
 
  @else
-  <p>{{ __( 'You need to' ) }} <a href="{{ route( 'videos.create' ) }}">{{ __( 'insert a new video' ) }}</a></p>
+  <p>{{ __( 'You need to' ) }} <a href="{{ route( 'videos.create' ) }}" class="underline">{{ __( 'insert a new video' ) }}</a></p>
 
  @endif
 
