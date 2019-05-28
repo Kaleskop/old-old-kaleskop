@@ -14,14 +14,14 @@
 
  <div>
   <div>
-   <h4>{{ __( 'Resources' ) }}</h4>
+   <h4 class="mb-2 font-medium text-xl">{{ __( 'Resources' ) }}</h4>
    <p><a href="" class="underline">{{ __( 'Pricing' ) }}</a></p>
    <p><a href="" class="underline">{{ __( 'Documentation' ) }}</a></p>
    <p><a href="https://discord.gg/rcMk7M5" class="underline" target="_blank">Discord</a></p>
   </div>
 
   <div>
-   <h4>{{ __( 'Company' ) }}</h4>
+   <h4 class="mb-2 font-medium text-xl">{{ __( 'Company' ) }}</h4>
    <p><a href="" class="underline">{{ __( 'About' ) }}</a></p>
    <p><a href="" class="underline">{{ __( 'Terms of Service' ) }}</a></p>
    <p><a href="" class="underline">{{ __( 'Privacy' ) }}</a></p>
