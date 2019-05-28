@@ -7,7 +7,7 @@
    <span>{{ __( 'Ready to get started?' ) }}</span>
    <span>{{ config( 'app.name' ) }}. {{ __( 'We Advertise!' ) }}</span>
   </div>
-  <div>
+  <div class="py-4 flex">
    <a href="{{ route( 'register' ) }}">{{ __( 'Sign up for free' ) }}</a>
   </div>
  </div>
