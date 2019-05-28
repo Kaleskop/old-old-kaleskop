@@ -6,7 +6,7 @@
   <h2 class="mb-2 font-medium text-3xl">{{ __( 'New sponsor' ) }}</h2>
  </header>
 
- @if ( count( $advs ) > 0 )
+ @if ( count( $brands ) > 0 )
   @include( 'advs.sponsor-form' )
 
  @else
