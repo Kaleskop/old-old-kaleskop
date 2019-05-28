@@ -1,5 +1,5 @@
-<section>
- <h3>{{ __( 'Opineon' ) }}</h3>
+<section class="px-2 py-8">
+ <h3 class="mb-2 font-semibold text-2xl">{{ __( 'Opineon' ) }}</h3>
 
  @if ( isset( $opineon ) && $opineon->exists() )
   @include( 'opineons.opineon', [ 'opineon'=>$opineon->first() ] )
@@ -12,7 +12,7 @@
  @endif
 
  @isset( $opinions )
- <div>
+ <div class="mt-8 flex flex-col">
   @forelse( $opinions as $opinion )
    @include( 'opineons.feed' )
 
