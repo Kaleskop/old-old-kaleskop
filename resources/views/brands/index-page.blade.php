@@ -1,14 +1,14 @@
 @extends( 'layouts.page' )
 
 @section( 'page' )
-<section>
- <header>
-  <h2>{{ __( 'Brands' ) }}</h2>
+<section class="px-4 py-8">
+ <header class="mb-4">
+  <h2 class="mb-2 font-medium text-3xl">{{ __( 'Brands' ) }}</h2>
 
-  <a href="{{ route( 'brands.create' ) }}">{{ __( 'New brand' ) }}</a>
+  <a href="{{ route( 'brands.create' ) }}" class="underline">{{ __( 'New brand' ) }}</a>
  </header>
 
- <div>
+ <div class="flex flex-col">
   @forelse( $brands as $brand )
    @include( 'brands.tile' )
 
