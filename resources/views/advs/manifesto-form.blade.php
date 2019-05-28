@@ -1,14 +1,14 @@
 <form method="POST" action="{{ route( 'advs.manifestoTo', $adv ) }}">
  @csrf
 
- <p>{{ $adv->title }}</p>
+ <p class="mb-2 font-medium text-2xl uppercase">{{ $adv->title }}</p>
 
- <fieldset>
-  <legend>{{ __( 'Manifesto details' ) }}</legend>
+ <fieldset class="mb-8">
+  <legend class="p-2 font-light italic">{{ __( 'Manifesto details' ) }}</legend>
 
   <div>
-   <label for="videos">{{ __( 'Videos' ) }}</label>
-   <select name="videos[]" id="videos" multiple>
+   <label for="videos" class="block p-2 font-semibold">{{ __( 'Videos' ) }}</label>
+   <select name="videos[]" id="videos" class="appearance-none outline-none cursor-pointer block w-full leading-snug py-1 px-2 border border-transparent bg-white shadow focus:shadow-md" multiple>
     @foreach( $videos as $video )
      <option value="{{ $video->id }}"{{ in_array( $video->id, $adv->videos()->pluck( 'id' )->toArray()) ? ' selected' : '' }}>{{ $video->name }}</option>
 
@@ -17,5 +17,5 @@
   </div>
  </fieldset>
 
- <button type="submit">{{ __( 'Create' ) }}</button>
+ <button type="submit" class="appearance-none outline-none cursor-pointer select-none block w-full leading-snug py-1 px-2 border border-transparent bg-gray-400 text-lg font-semibold text-center focus:shadow-md">{{ __( 'Create' ) }}</button>
 </form>
