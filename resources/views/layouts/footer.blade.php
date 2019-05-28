@@ -1,5 +1,5 @@
 <footer class="pt-16">
- <div>
+ <div class="py-4">
   <div>
    <a href="{{ route( 'website.homepage' ) }}">
     <img src="" alt="The Kaleskop K" />
