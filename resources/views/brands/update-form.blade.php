@@ -21,6 +21,8 @@
    @if ( $errors->has( 'description' ) )
     {{ $errors->first( 'description' ) }}
    @endif
+
+   <p><small><span class="fab fa-markdown"></span> <a href="https://guides.github.com/features/mastering-markdown/" target="_blank">Style with Markdown</a></small></p>
   </div>
 
   <div class="mt-4">
