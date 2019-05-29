@@ -21,7 +21,7 @@
     {{ $errors->first( 'description' ) }}
    @endif
 
-   <p><small><span class="fab fa-markdown"></span> <a href="https://guides.github.com/features/mastering-markdown/" target="_blank">Style with Markdown</a></small></p>
+   <p><small class="flex items-center font-light text-sm text-grey-400"><span class="fab fa-markdown mr-2"></span> <a href="https://guides.github.com/features/mastering-markdown/" class="underline" target="_blank">Style with Markdown</a></small></p>
   </div>
 
   <div class="mt-4">
