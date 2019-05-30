@@ -1,8 +1,14 @@
 @extends( 'layouts.layout' )
 
 @section( 'body' )
- @include( 'layouts.sidebar' )
+<div>
+ <div>
+  @include( 'layouts.sidebar' )
+ </div>
 
- @include( $page )
+ <div>
+  @include( $page )
+ </div>
+</div>
 
 @endsection
