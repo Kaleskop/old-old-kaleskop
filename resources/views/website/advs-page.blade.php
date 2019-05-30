@@ -10,7 +10,7 @@
 
    <a href="{{ route( 'website.endpoint', $adv ) }}">
     <span class="fas fa-external-link-square-alt"></span>
-    <span>{{ __( 'Go to product page' ) }}</span>
+    <span class="hidden">{{ __( 'Go to product page' ) }}</span>
    </a>
   </header>
  </div>
