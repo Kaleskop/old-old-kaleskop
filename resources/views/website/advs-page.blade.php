@@ -8,7 +8,10 @@
   <header class="p-2 flex justify-between items-center bg-black text-white">
    <h2 class="font-medium text-2xl">{{ $adv->title }}</h2>
 
-   <a href="{{ route( 'website.endpoint', $adv ) }}"><span class="fas fa-external-link-square-alt"></span></a>
+   <a href="{{ route( 'website.endpoint', $adv ) }}">
+    <span class="fas fa-external-link-square-alt"></span>
+    <span>{{ __( 'Go to product page' ) }}</span>
+   </a>
   </header>
  </div>
 
