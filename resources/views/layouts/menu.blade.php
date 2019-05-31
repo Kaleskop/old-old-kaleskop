@@ -2,7 +2,7 @@
 
  <a href="{{ route( 'website.channels' ) }}" class="w-8 h-8 items-center justify-center border border-transparent rounded-full active:bg-kaleskop-gold hidden sm:inline-flex sm:mb-4">
   <span class="fas fa-project-diagram"></span>
-  <span>{{ __( 'Channels' ) }}</span>
+  <span class="hidden">{{ __( 'Channels' ) }}</span>
  </a>
 
  @auth
