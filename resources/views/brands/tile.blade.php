@@ -1,6 +1,6 @@
 <div>
  <div class="flex">
-  <figure>
+  <figure class="w-1/4">
    <img src="{{ asset( 'storage/'.$brand->logo_path ) }}" class="w-full" />
   </figure>
 
