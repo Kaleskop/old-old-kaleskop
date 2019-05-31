@@ -1,8 +1,14 @@
 @extends( 'layouts.layout' )
 
 @section( 'body' )
- @include( 'layouts.sidebar' )
+<div class="sm:flex">
+ <div>
+  @include( 'layouts.sidebar' )
+ </div>
 
- @include( $page )
+ <div class="sm:flex-1 sm:order-first">
+  @include( $page )
+ </div>
+</div>
 
 @endsection
