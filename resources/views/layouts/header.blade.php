@@ -3,6 +3,6 @@
 
  <a href="{{ route( 'website.channels' ) }}" class="sm:hidden">
   <span class="fas fa-project-diagram"></span>
-  <span>{{ __( 'Channels' ) }}</span>
+  <span class="hidden">{{ __( 'Channels' ) }}</span>
  </a>
 </header>
