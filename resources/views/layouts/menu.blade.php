@@ -1,6 +1,6 @@
 <nav class="py-4 flex justify-around sm:flex-col sm:items-center">
 
- <a href="{{ route( 'website.channels' ) }}">
+ <a href="{{ route( 'website.channels' ) }}" class="w-8 h-8 items-center justify-center border border-transparent rounded-full active:bg-kaleskop-gold hidden sm:inline-flex sm:mb-4">
   <span class="fas fa-project-diagram"></span>
   <span>{{ __( 'Channels' ) }}</span>
  </a>
