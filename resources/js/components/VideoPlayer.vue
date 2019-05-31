@@ -80,6 +80,7 @@ export default {
    this.player.src(this.getSources());
    this.player.addClass('vjs-kaleskop');
    this.player.addClass('vjs-16-9');
+   this.player.addClass('vjs-big-play-centered');
   },
 
   getSources() {
