@@ -73,4 +73,20 @@ class Adv extends Model {
  public function brands() {
   return $this->belongsToMany( Brand::class, 'sponsor', 'adv_id', 'brand_id' )->withTimestamps();
  }
+
+
+ // - helpers
+
+ /**
+  * Get width class name based on numbers of brands for styling purpose
+  */
+ public function widthClassName() {
+  $className = 'w-1/3';
+  $count = $this->brands()->count();
+
+  if ( $count == 1 ) { $className = 'w-full'; }
+  if ( $count == 2 ) { $className = 'w-1/2'; }
+
+  return $className;
+ }
 }
