@@ -74,6 +74,7 @@ class Adv extends Model {
   return $this->belongsToMany( Brand::class, 'sponsor', 'adv_id', 'brand_id' )->withTimestamps();
  }
 
+
  // - helpers
 
  /**
