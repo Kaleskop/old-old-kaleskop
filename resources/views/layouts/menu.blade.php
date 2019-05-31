@@ -1,5 +1,10 @@
 <nav class="py-4 flex justify-around sm:flex-col sm:items-center">
 
+ <a href="{{ route( 'website.channels' ) }}">
+  <span class="fas fa-project-diagram"></span>
+  <span>{{ __( 'Channels' ) }}</span>
+ </a>
+
  @auth
  <a href="{{ route( 'account.index' ) }}" class="w-8 h-8 inline-flex items-center justify-center border border-transparent rounded-full bg-grey-300 shadow-inner hover:shadow-none active:bg-kaleskop-gold sm:mb-4">
   <span class="far fa-user"></span>
