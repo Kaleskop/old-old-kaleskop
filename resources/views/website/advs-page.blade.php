@@ -15,7 +15,7 @@
   </header>
  </div>
 
- <div class="flex flex-col">
+ <div class="py-4 flex items-center justify-around">
   @foreach( $adv->brands as $brand )
    @include( 'brands.tile-on-channels' )
 
