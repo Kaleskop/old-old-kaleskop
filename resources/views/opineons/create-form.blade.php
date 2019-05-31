@@ -14,5 +14,9 @@
   </div>
  </fieldset>
 
- <button type="submit" class="appearance-none outline-none cursor-pointer select-none block leading-snug p-2 ml-auto border border-transparent font-medium text-center focus:shadow-md">{{ __( 'Publish' ) }}</button>
+ <div class="py-2 flex items-center">
+  <small class="flex items-center font-light text-sm text-grey-400"><span class="fab fa-markdown mr-2"></span> <a href="https://guides.github.com/features/mastering-markdown/" class="underline" target="_blank">Style with Markdown</a></small>
+
+  <button type="submit" class="appearance-none outline-none cursor-pointer select-none block leading-snug p-2 ml-auto border border-transparent font-medium text-center focus:shadow-md">{{ __( 'Publish' ) }}</button>
+ </div>
 </form>
