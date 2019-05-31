@@ -1,4 +1,5 @@
 <footer class="pt-16">
+@guest
  <div class="py-4">
   <div>
    <a href="{{ route( 'website.homepage' ) }}">
@@ -11,6 +12,8 @@
    <a href="{{ route( 'register' ) }}">{{ __( 'Sign up for free' ) }}</a>
   </div>
  </div>
+
+@endguest
 
  <div class="flex justify-around">
   <div>
