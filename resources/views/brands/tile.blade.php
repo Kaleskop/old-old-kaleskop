@@ -4,7 +4,7 @@
    <img src="{{ asset( 'storage/'.$brand->logo_path ) }}" class="w-full" />
   </figure>
 
-  <article>
+  <article class="ml-4 flex-1">
    <header class="flex justify-between items-center">
     <h4 class="mb-2 font-medium text-2xl">{{ $brand->name }}</h4>
 
