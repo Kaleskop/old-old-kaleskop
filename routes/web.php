@@ -62,6 +62,7 @@ Route::patch( '/brands/{brand}', 'BrandsController@update' )->name( 'brands.upda
 Route::delete( '/brands/{brand}', 'BrandsController@destroy' )->name( 'brands.destroy' );
 Route::get( '/brands', 'BrandsController@index' )->name( 'brands.index' );
 Route::get( '/brands/create', 'BrandsController@create' )->name( 'brands.create' );
+Route::get( '/brands/{brand}/edit', 'BrandsController@edit' )->name( 'brands.edit' );
 Route::get( '/brands/{brand}/sponsor', 'BrandsController@sponsor' )->name( 'brands.sponsor' );
 
 // - videos

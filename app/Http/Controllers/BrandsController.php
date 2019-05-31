@@ -79,6 +79,11 @@ class BrandsController extends Controller {
   return view( 'layouts.wrapper', [ 'page'=>'brands.create-page' ] );
  }
 
+ public function edit( Brand $brand ) {
+  return view( 'layouts.wrapper', [ 'page'=>'brands.edit-page' ] )
+   ->with( 'brand', $brand );
+ }
+
  public function sponsor( Brand $brand ) {
   $advs = Auth::user()->advs;
 
