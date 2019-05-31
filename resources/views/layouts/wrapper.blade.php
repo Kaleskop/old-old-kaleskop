@@ -2,7 +2,7 @@
 
 @section( 'body' )
 <div class="sm:flex">
- <div>
+ <div class="md:bg-grey-100">
   @include( 'layouts.sidebar' )
  </div>
 
