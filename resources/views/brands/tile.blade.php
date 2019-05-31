@@ -1,5 +1,5 @@
 <div>
- <div>
+ <div class="flex">
   <figure>
    <img src="{{ asset( 'storage/'.$brand->logo_path ) }}" class="w-full" />
   </figure>
