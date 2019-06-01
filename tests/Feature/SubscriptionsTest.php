@@ -66,7 +66,7 @@ class SubscriptionsTest extends TestCase {
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->create( [ 'user_id'=>$user->id ] );
-  $data = [ 'plan'=>'plan_F7VBkOHU297sxU', 'stripeToken'=>'tok_visa' ];
+  $data = [ 'plan'=>'plan_F7VBkOHU297sxU', 'stripeToken'=>'tok_visa', 'terms'=>'true' ];
   $this->post( route( 'plans.subscribe' ), $data );
 
   $this->assertDatabaseHas( 'subscriptions', [ 'business_id'=>$business->id ] );
@@ -78,7 +78,7 @@ class SubscriptionsTest extends TestCase {
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->create( [ 'user_id'=>$user->id ] );
-  $data = [ 'plan'=>'plan_F7VBkOHU297sxU', 'stripeToken'=>'tok_visa' ];
+  $data = [ 'plan'=>'plan_F7VBkOHU297sxU', 'stripeToken'=>'tok_visa', 'terms'=>'true' ];
   $this->post( route( 'plans.subscribe' ), $data );
 
   $plan = factory( Plan::class )->create( [
@@ -97,7 +97,7 @@ class SubscriptionsTest extends TestCase {
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->create( [ 'user_id'=>$user->id ] );
-  $data = [ 'plan'=>'plan_F7VBkOHU297sxU', 'stripeToken'=>'tok_visa' ];
+  $data = [ 'plan'=>'plan_F7VBkOHU297sxU', 'stripeToken'=>'tok_visa', 'terms'=>'true' ];
   $this->post( route( 'plans.subscribe' ), $data );
   $plan = factory( Plan::class )->create( [
    'product_id'=>'prod_EHotzEytjeP74I',

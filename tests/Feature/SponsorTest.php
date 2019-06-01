@@ -22,7 +22,7 @@ class SponsorTest extends TestCase {
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->create( [ 'user_id'=>$user->id ] );
-  $data = [ 'plan'=>'plan_F7VBkOHU297sxU', 'stripeToken'=>'tok_visa' ];
+  $data = [ 'plan'=>'plan_F7VBkOHU297sxU', 'stripeToken'=>'tok_visa', 'terms'=>'true' ];
   $this->post( route( 'plans.subscribe' ), $data );
   $brand = factory( Brand::class )->create();
   $advs = factory( Adv::class, 5 )->create();
@@ -38,7 +38,7 @@ class SponsorTest extends TestCase {
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->create( [ 'user_id'=>$user->id ] );
-  $data = [ 'plan'=>'plan_F7VBkOHU297sxU', 'stripeToken'=>'tok_visa' ];
+  $data = [ 'plan'=>'plan_F7VBkOHU297sxU', 'stripeToken'=>'tok_visa', 'terms'=>'true' ];
   $this->post( route( 'plans.subscribe' ), $data );
   $adv = factory( Adv::class )->create();
   $brands = factory( Brand::class, 3 )->create();
