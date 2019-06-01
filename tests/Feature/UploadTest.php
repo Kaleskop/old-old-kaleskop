@@ -34,7 +34,7 @@ class UploadTest extends TestCase {
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->create( [ 'user_id'=>$user->id ] );
-  $data = [ 'plan'=>'plan_EHouRyzHQYawXA', 'stripeToken'=>'tok_visa' ];
+  $data = [ 'plan'=>'plan_F7VBkOHU297sxU', 'stripeToken'=>'tok_visa' ];
   $this->post( route( 'plans.subscribe' ), $data );
   $file = UploadedFile::fake()->create( 'fakevideo.mp4', 15200 );
   $response = $this->post( route( 'videos.upload' ), [ 'uservideo'=>$file ] );
@@ -48,7 +48,7 @@ class UploadTest extends TestCase {
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->create( [ 'user_id'=>$user->id ] );
-  $data = [ 'plan'=>'plan_EHouRyzHQYawXA', 'stripeToken'=>'tok_visa' ];
+  $data = [ 'plan'=>'plan_F7VBkOHU297sxU', 'stripeToken'=>'tok_visa' ];
   $this->post( route( 'plans.subscribe' ), $data );
   $file = UploadedFile::fake()->create( 'fakevideo.mp4', 15200 );
   $this->post( route( 'videos.upload' ), [ 'uservideo'=>$file ] );
