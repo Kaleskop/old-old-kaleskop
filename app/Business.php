@@ -97,7 +97,7 @@ class Business extends Model {
   $result = false;
   $plans = Plan::all();
 
-  if ( !$plans->isEmpty() ) {
+  if ( $plans->isNotEmpty() ) {
    foreach( $plans as $plan ) {
     if ( $this->subscribed( $plan->product_name ) ) {
      $result = true;
