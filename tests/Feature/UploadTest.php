@@ -20,7 +20,7 @@ class UploadTest extends TestCase {
 
   $user = factory( User::class )->create();
   $this->actingAs( $user );
-  $business = factory( Business::class )->make();
+  $business = factory( Business::class )->make( [ 'terms'=>'true' ] );
 
   $response = $this->post( route( 'business.store' ), $business->toArray() );
   $db = Business::where( 'name', $business->name )->first();
