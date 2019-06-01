@@ -43,7 +43,7 @@ class ManifestoTest extends TestCase {
   $adv = factory( Adv::class )->create();
   $videos = factory( Video::class, 3 )->create();
 
-  $response = $this->post( route( 'advs.linkTo', $adv ), [ 'videos'=>$videos->pluck( 'id' )->toArray() ] );
+  $response = $this->post( route( 'advs.manifestoTo', $adv ), [ 'videos'=>$videos->pluck( 'id' )->toArray() ] );
 
   $this->assertDatabaseHas( 'manifesto', [ 'adv_id'=>$adv->id, 'video_id'=>$videos->first()->id ] );
  }

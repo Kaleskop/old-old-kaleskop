@@ -43,7 +43,7 @@ class SponsorTest extends TestCase {
   $adv = factory( Adv::class )->create();
   $brands = factory( Brand::class, 3 )->create();
 
-  $response = $this->post( route( 'advs.sponsor', $adv ), [ 'brands'=>$brands->pluck( 'id' )->toArray() ] );
+  $response = $this->post( route( 'advs.sponsorTo', $adv ), [ 'brands'=>$brands->pluck( 'id' )->toArray() ] );
 
   $this->assertDatabaseHas( 'sponsor', [ 'adv_id'=>$adv->id, 'brand_id'=>$brands->first()->id ] );
  }
