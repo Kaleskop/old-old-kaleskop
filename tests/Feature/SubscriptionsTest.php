@@ -82,9 +82,9 @@ class SubscriptionsTest extends TestCase {
   $this->post( route( 'plans.subscribe' ), $data );
 
   $plan = factory( Plan::class )->create( [
-   'product_id'=>'prod_EHotzEytjeP74I',
-   'product_name'=>'Subscriptions',
-   'plan_id'=>'plan_EHoyqsBfRjYsSg'
+   'product_id'=>'prod_F7VA2ugAWXZIhT',
+   'product_name'=>'Storage',
+   'plan_id'=>'plan_FAtbGzr51Osl6K'
   ] );
   $response = $this->patch( route( 'plans.swap', $plan ) );
 
@@ -100,12 +100,12 @@ class SubscriptionsTest extends TestCase {
   $data = [ 'plan'=>'plan_F7VBkOHU297sxU', 'stripeToken'=>'tok_visa', 'terms'=>'true' ];
   $this->post( route( 'plans.subscribe' ), $data );
   $plan = factory( Plan::class )->create( [
-   'product_id'=>'prod_EHotzEytjeP74I',
-   'product_name'=>'Subscriptions',
+   'product_id'=>'prod_F7VA2ugAWXZIhT',
+   'product_name'=>'Storage',
    'plan_id'=>'plan_F7VBkOHU297sxU'
   ] );
   $response = $this->delete( route( 'plans.cancel', $plan ) );
 
-  $this->assertNotNull( $business->subscription( 'Subscriptions' )->ends_at );
+  $this->assertNotNull( $business->subscription( 'Storage' )->ends_at );
  }
 }
