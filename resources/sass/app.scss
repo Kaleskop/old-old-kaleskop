@@ -6,3 +6,8 @@
 @import "tailwind";
 
 @import "videojs";
+
+// - custom utilities
+.outline-none-important {
+ outline: 0 !important;
+}
