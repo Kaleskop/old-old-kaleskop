@@ -12,23 +12,17 @@ class PlanSeeder extends Seeder {
   * @return void
   */
  public function run() {
-  // - yearly
+  // - standard
   factory( Plan::class )->create( [
-   'product_id' => 'prod_EHotzEytjeP74I',
-   'product_name' => 'Subscriptions',
-   'plan_id' => 'plan_EHozlsAe2RfwAp'
+   'product_id' => 'prod_F7VA2ugAWXZIhT',
+   'product_name' => 'Storage',
+   'plan_id' => 'plan_F7VBkOHU297sxU'
   ] );
-  // - half
+  // - pro
   factory( Plan::class )->create( [
-   'product_id' => 'prod_EHotzEytjeP74I',
-   'product_name' => 'Subscriptions',
-   'plan_id' => 'plan_EHoyqsBfRjYsSg'
-  ] );
-  // - monthly
-  factory( Plan::class )->create( [
-   'product_id' => 'prod_EHotzEytjeP74I',
-   'product_name' => 'Subscriptions',
-   'plan_id' => 'plan_EHouRyzHQYawXA'
+   'product_id' => 'prod_F7VA2ugAWXZIhT',
+   'product_name' => 'Storage',
+   'plan_id' => 'plan_FAtbGzr51Osl6K'
   ] );
  }
 }
