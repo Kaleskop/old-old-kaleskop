@@ -52,6 +52,16 @@ class AdvsController extends Controller {
   return back();
  }
 
+ public function express( Request $request, Adv $adv ) {
+  $this->validate( $request, [
+   'body' => [ 'required', 'string' ]
+  ] );
+
+  $opinion = $request->user()->express( $request->all(), $adv );
+
+  return back();
+ }
+
 
  // - view actions
 
