@@ -5,6 +5,13 @@
   <span class="hidden">{{ __( 'Channels' ) }}</span>
  </a>
 
+ @guest
+ <a href="{{ route( 'login' ) }}" class="w-8 h-8 items-center justify-center border border-transparent rounded-full active:bg-kaleskop-gold hidden sm:inline-flex sm:mb-4">
+  <span class="far fa-user"></span>
+  <span class="hidden">{{ __( 'Login' ) }}</span>
+ </a>
+ @endguest
+
  @auth
  <a href="{{ route( 'account.index' ) }}" class="w-8 h-8 inline-flex items-center justify-center border border-transparent rounded-full bg-grey-300 shadow-inner hover:shadow-none active:bg-kaleskop-gold sm:mb-4">
   <span class="far fa-user"></span>
