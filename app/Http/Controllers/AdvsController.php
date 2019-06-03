@@ -11,8 +11,9 @@ class AdvsController extends Controller {
 
  public function __construct() {
   $this->middleware( 'auth' );
-  $this->middleware( 'business' );
-  $this->middleware( 'subscribed' );
+  $this->middleware( 'verified' );
+  $this->middleware( 'business' )->except( 'express' );
+  $this->middleware( 'subscribed' )->except( 'express' );
  }
 
  public function store( Request $request ) {
@@ -48,6 +49,16 @@ class AdvsController extends Controller {
   ] );
 
   $adv->brands()->sync( $request->brands );
+
+  return back();
+ }
+
+ public function express( Request $request, Adv $adv ) {
+  $this->validate( $request, [
+   'body' => [ 'required', 'string' ]
+  ] );
+
+  $opinion = $request->user()->express( $request->all(), $adv );
 
   return back();
  }

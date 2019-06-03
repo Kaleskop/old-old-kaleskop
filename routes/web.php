@@ -45,6 +45,7 @@ Route::get( '/plans/create', 'PlansController@create' )->name( 'plans.create' );
 Route::post( '/advs/store', 'AdvsController@store' )->name( 'advs.store' );
 Route::post( '/advs/{adv}/manifestoTo', 'AdvsController@manifestoTo' )->name( 'advs.manifestoTo' );
 Route::post( '/advs/{adv}/sponsorTo', 'AdvsController@sponsorTo' )->name( 'advs.sponsorTo' );
+Route::post( '/advs/{adv}/express', 'AdvsController@express' )->name( 'advs.express' );
 Route::delete( '/advs/{adv}', 'AdvsController@destroy' )->name( 'advs.destroy' );
 Route::get( '/advs', 'AdvsController@index' )->name( 'advs.index' );
 Route::get( '/advs/create', 'AdvsController@create' )->name( 'advs.create' );
@@ -52,7 +53,6 @@ Route::get( '/advs/{adv}/manifesto', 'AdvsController@manifesto' )->name( 'advs.m
 Route::get( '/advs/{adv}/sponsor', 'AdvsController@sponsor' )->name( 'advs.sponsor' );
 
 // - opineon
-Route::post( '/opineon/{subject}', 'OpineonController@express' )->name( 'opineon.express' );
 Route::post( '/opineon/{opinion}/comment', 'OpineonController@comment' )->name( 'opineon.comment' );
 
 // - brands

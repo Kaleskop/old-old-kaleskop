@@ -1,4 +1,4 @@
-<form method="POST" action="{{ route( 'opineon.express', $adv ) }}">
+<form method="POST" action="{{ route( 'advs.express', $adv ) }}">
  @csrf
 
  <fieldset>
