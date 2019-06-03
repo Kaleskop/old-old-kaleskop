@@ -14,8 +14,8 @@ class SubscribedMiddleware {
   * @return mixed
   */
  public function handle( $request, Closure $next ) {
-  //if ( !$request->user()->business->isSubscribed() ) {
-  if ( !$request->user()->business->subscribed( 'Storage' ) ) {
+  if ( !$request->user()->business->isSubscribed() ) {
+  //if ( !$request->user()->business->subscribed( 'Storage' ) ) {
 
    return redirect()->route( 'business.subscriptions' );
   }
