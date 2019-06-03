@@ -52,7 +52,7 @@ class SubscriptionsTest extends TestCase {
 
   $user = factory( User::class )->create();
   $this->actingAs( $user );
-  $business = factory( Business::class )->make();
+  $business = factory( Business::class )->make( [ 'terms'=>'true' ] );
 
   $response = $this->post( route( 'business.store' ), $business->toArray() );
 
@@ -66,7 +66,7 @@ class SubscriptionsTest extends TestCase {
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->create( [ 'user_id'=>$user->id ] );
-  $data = [ 'plan'=>'plan_EHouRyzHQYawXA', 'stripeToken'=>'tok_visa' ];
+  $data = [ 'plan'=>'plan_F7VBkOHU297sxU', 'stripeToken'=>'tok_visa', 'terms'=>'true' ];
   $this->post( route( 'plans.subscribe' ), $data );
 
   $this->assertDatabaseHas( 'subscriptions', [ 'business_id'=>$business->id ] );
@@ -78,13 +78,13 @@ class SubscriptionsTest extends TestCase {
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->create( [ 'user_id'=>$user->id ] );
-  $data = [ 'plan'=>'plan_EHouRyzHQYawXA', 'stripeToken'=>'tok_visa' ];
+  $data = [ 'plan'=>'plan_F7VBkOHU297sxU', 'stripeToken'=>'tok_visa', 'terms'=>'true' ];
   $this->post( route( 'plans.subscribe' ), $data );
 
   $plan = factory( Plan::class )->create( [
-   'product_id'=>'prod_EHotzEytjeP74I',
-   'product_name'=>'Subscriptions',
-   'plan_id'=>'plan_EHoyqsBfRjYsSg'
+   'product_id'=>'prod_F7VA2ugAWXZIhT',
+   'product_name'=>'Storage',
+   'plan_id'=>'plan_FAtbGzr51Osl6K'
   ] );
   $response = $this->patch( route( 'plans.swap', $plan ) );
 
@@ -97,15 +97,15 @@ class SubscriptionsTest extends TestCase {
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->create( [ 'user_id'=>$user->id ] );
-  $data = [ 'plan'=>'plan_EHouRyzHQYawXA', 'stripeToken'=>'tok_visa' ];
+  $data = [ 'plan'=>'plan_F7VBkOHU297sxU', 'stripeToken'=>'tok_visa', 'terms'=>'true' ];
   $this->post( route( 'plans.subscribe' ), $data );
   $plan = factory( Plan::class )->create( [
-   'product_id'=>'prod_EHotzEytjeP74I',
-   'product_name'=>'Subscriptions',
-   'plan_id'=>'plan_EHouRyzHQYawXA'
+   'product_id'=>'prod_F7VA2ugAWXZIhT',
+   'product_name'=>'Storage',
+   'plan_id'=>'plan_F7VBkOHU297sxU'
   ] );
   $response = $this->delete( route( 'plans.cancel', $plan ) );
 
-  $this->assertNotNull( $business->subscription( 'Subscriptions' )->ends_at );
+  $this->assertNotNull( $business->subscription( 'Storage' )->ends_at );
  }
 }

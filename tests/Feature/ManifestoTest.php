@@ -22,7 +22,7 @@ class ManifestoTest extends TestCase {
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->create( [ 'user_id'=>$user->id ] );
-  $data = [ 'plan'=>'plan_EHouRyzHQYawXA', 'stripeToken'=>'tok_visa' ];
+  $data = [ 'plan'=>'plan_F7VBkOHU297sxU', 'stripeToken'=>'tok_visa', 'terms'=>'true' ];
   $this->post( route( 'plans.subscribe' ), $data );
   $video = factory( Video::class )->create();
   $advs = factory( Adv::class, 5 )->create();
@@ -38,12 +38,12 @@ class ManifestoTest extends TestCase {
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->create( [ 'user_id'=>$user->id ] );
-  $data = [ 'plan'=>'plan_EHouRyzHQYawXA', 'stripeToken'=>'tok_visa' ];
+  $data = [ 'plan'=>'plan_F7VBkOHU297sxU', 'stripeToken'=>'tok_visa', 'terms'=>'true' ];
   $this->post( route( 'plans.subscribe' ), $data );
   $adv = factory( Adv::class )->create();
   $videos = factory( Video::class, 3 )->create();
 
-  $response = $this->post( route( 'advs.linkTo', $adv ), [ 'videos'=>$videos->pluck( 'id' )->toArray() ] );
+  $response = $this->post( route( 'advs.manifestoTo', $adv ), [ 'videos'=>$videos->pluck( 'id' )->toArray() ] );
 
   $this->assertDatabaseHas( 'manifesto', [ 'adv_id'=>$adv->id, 'video_id'=>$videos->first()->id ] );
  }

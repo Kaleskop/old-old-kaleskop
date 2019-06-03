@@ -17,7 +17,8 @@ class UserAccountTest extends TestCase {
    'name' => 'Name',
    'email' => 'a@b.c',
    'password' => 'password',
-   'password_confirmation' => 'password'
+   'password_confirmation' => 'password',
+   'terms' => 'true'
   ];
 
   $response = $this->post( route( 'register' ), $data );
