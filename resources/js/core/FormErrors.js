@@ -55,3 +55,5 @@ class FormErrors {
   this.errors = {};
  }
 }
+
+export default FormErrors;
