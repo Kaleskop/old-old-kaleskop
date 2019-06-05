@@ -6,7 +6,7 @@
 
   <div>
    <label for="body">Body</label>
-   <textarea name="body" id="body" placeholder="Your comment.." required></textarea>
+   <textarea name="body" id="body" placeholder="Your comment.." v-model="form.body" required></textarea>
   </div>
  </fieldset>
 
