@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import Form from "../core/Form";
+
 export default {
  "name": "comment-form",
 
@@ -23,6 +25,12 @@ export default {
   "action": {
    "type": String,
    "required": true
+  }
+ },
+
+ data() {
+  return {
+   "form": new Form({ 'body': '' })
   }
  }
 }
