@@ -6,7 +6,7 @@
 export default {
  "name": "opineon-comment",
 
-  "props": {
+ "props": {
   "comment": {
    "type": Object,
    "required": true
