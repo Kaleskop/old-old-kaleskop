@@ -1,5 +1,11 @@
 <template>
- 
+
+<div>
+ <figure></figure>
+
+ <div>{{ comment.body }}</div>
+</div>
+
 </template>
 
 <script>
