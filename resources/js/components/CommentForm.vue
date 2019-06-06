@@ -1,6 +1,6 @@
 <template>
 
-<form>
+<form v-on:submit.prevent="onSubmit">
  <fieldset>
   <legend>Comment details</legend>
 
@@ -31,6 +31,12 @@ export default {
  data() {
   return {
    "form": new Form({ 'body': '' })
+  }
+ },
+
+ "methods": {
+  onSubmit() {
+   this.form.post(this.action).then(status => alert('All done!'));
   }
  }
 }
