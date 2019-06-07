@@ -1,9 +1,9 @@
 <template>
 
-<div>
- <figure></figure>
+<div class="relative mb-2 p-2 flex">
+ <figure class="w-8 h-8 mr-2 rounded-full bg-kaleskop-gold"></figure>
 
- <div>{{ comment.body }}</div>
+ <div class="flex-1">{{ comment.body }}</div>
 </div>
 
 </template>
