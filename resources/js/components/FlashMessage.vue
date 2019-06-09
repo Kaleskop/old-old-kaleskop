@@ -1,5 +1,9 @@
 <template>
 
+<div role="alert">
+ {{ body }}
+</div>
+
 </template>
 
 <script>
