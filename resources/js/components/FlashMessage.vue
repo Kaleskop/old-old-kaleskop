@@ -1,6 +1,6 @@
 <template>
 
-<div role="alert">
+<div role="alert" v-show="show">
  {{ body }}
 </div>
 
@@ -18,7 +18,8 @@ export default {
 
  data() {
   return {
-   "body": ''
+   "body": '',
+   "show": false
   }
  },
 
@@ -33,6 +34,12 @@ export default {
  "methods": {
   flash(message) {
    this.body = message.body;
+   this.show = true;
+
+   this.hide();
+  },
+  hide() {
+   setTimeout(() => { this.show = false; },3000);
   }
  }
 }
