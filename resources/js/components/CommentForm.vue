@@ -12,7 +12,7 @@
   </div>
  </fieldset>
 
- <button type="submit">Comment</button>
+ <button type="submit" v-bind:disabled="form.errors.any()">Comment</button>
 </form>
 
 </template>
