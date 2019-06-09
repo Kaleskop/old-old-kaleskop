@@ -11,13 +11,28 @@ export default {
  "name": "flash-message",
 
  "props": {
-  "type": Object,
-  "required": true
+  "message": {
+   "type": Object
+  }
  },
 
  data() {
   return {
    "body": ''
+  }
+ },
+
+ created() {
+  if (this.message) {
+   this.flash(this.message);
+  }
+
+  window.events.$on('flash', message => this.flash(message));
+ },
+
+ "methods": {
+  flash(message) {
+   this.body = message.body;
   }
  }
 }
