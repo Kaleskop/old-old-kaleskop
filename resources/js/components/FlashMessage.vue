@@ -1,6 +1,6 @@
 <template>
 
-<div role="alert" v-show="show">
+<div role="alert" class="fixed z-50 inset-x-0 bottom-0 p-4 bg-kaleskop-blue text-white" v-show="show">
  {{ body }}
 </div>
 
