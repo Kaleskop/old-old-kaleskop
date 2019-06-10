@@ -30,6 +30,9 @@ export default {
   },
   "canEdit": function() {
    return window.KALESKOP.user === this.opineon.author_id;
+  },
+  "hasComments": function() {
+   return this.opineon.comments_count > 0;
   }
  },
 
@@ -39,6 +42,19 @@ export default {
   },
   postOpinion() {
    return axios.post(this.action, { "body": this.opineon.body });
+  },
+  async updateComments() {
+   try {
+    const result = await this.fetchComments();
+
+    result.data.forEach(comment => {
+     if (!this.comments.includes(comment)) {
+      this.comments.push(comment);
+     }
+    });
+   } catch(err) {
+    console.log('comments fetch fail: ', err);
+   }
   }
  }
 }
