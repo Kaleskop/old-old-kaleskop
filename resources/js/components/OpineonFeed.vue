@@ -6,6 +6,10 @@ export default {
   "opinion": {
    "type": Object,
    "required": true
+  },
+  "action": {
+   "type": String,
+   "required": true
   }
  },
 
@@ -24,6 +28,9 @@ export default {
  "methods": {
   fetchComments() {
    return axios.get(this.endpoint);
+  },
+  postOpinion() {
+   return axios.post(this.action, { "body": this.opineon.body });
   }
  }
 }
