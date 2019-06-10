@@ -55,6 +55,19 @@ export default {
    } catch(err) {
     console.log('comments fetch fail: ', err);
    }
+  },
+  async newOpinion() {
+   try {
+    const result = await this.postOpinion();
+
+    this.opineon = result.data;
+    this.editing = false;
+    this.comments = [];
+
+    window.events.$emit('flash', { "body": "New Opinion!" });
+   } catch(err) {
+    console.log('post new opinion fail: '+ err);
+   }
   }
  }
 }
