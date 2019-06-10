@@ -12,7 +12,7 @@
     <textarea v-model="opineon.body"></textarea>
     <button type="button">{{ __( 'Change opinion' ) }}</button>
    </div>
-   <div v-else></div>
+   <div v-else>@{{ opineon.body }}</div>
   </div>
 
   <footer>
@@ -21,7 +21,7 @@
     
     <div>
      <p>{{ $opinion->author->name }}</p>
-     <p></p>
+     <p>@{{ opineon.created_at }}</p>
     </div>
    </div>
    
