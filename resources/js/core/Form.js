@@ -105,7 +105,7 @@ class Form {
   * @param {object} data
   */
  onSuccess(data) {
-  alert(data.message); // temporary
+  console.log(data); // temporary
 
   this.reset();
  }
