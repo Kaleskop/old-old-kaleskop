@@ -10,7 +10,7 @@
 
    <div v-if="editing">
     <textarea v-model="opineon.body"></textarea>
-    <button type="button">{{ __( 'Change opinion' ) }}</button>
+    <button type="button" v-on:click="newOpinion">{{ __( 'Change opinion' ) }}</button>
    </div>
    <div v-else>@{{ opineon.body }}</div>
   </div>
