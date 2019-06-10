@@ -83,6 +83,11 @@ export default {
     this.comments = [];
     this.updateComments();
    }
+  },
+  onNewComment(comment) {
+   this.comments.unshift(comment);
+
+   this.opineon.comments_count++;
   }
  }
 }
