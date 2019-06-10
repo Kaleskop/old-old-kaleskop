@@ -13,6 +13,10 @@ class OpineonController extends Controller {
   $this->middleware( 'verified' );
  }
 
+ public function comments( Opinion $opinion ) {
+  return $opinion->comments()->latest()->get();
+ }
+
  public function comment( Request $request, Opinion $opinion ) {
   $this->validate( $request, [
    'body' => [ 'required', 'string' ]
