@@ -3,16 +3,16 @@
 <article>
  <div>
   <div>
-   <div>
-    <button type="button">{{ __( 'Cancel' ) }}</button>
-    <button type="button">{{ __( 'Edit' ) }}</button>
+   <div v-if="signedIn && canEdit">
+    <button type="button" v-if="editing" v-on:click="editing = false">{{ __( 'Cancel' ) }}</button>
+    <button type="button" v-else v-on:click="editing = true">{{ __( 'Edit' ) }}</button>
    </div>
 
-   <div>
+   <div v-if="editing">
     <textarea></textarea>
     <button type="button">{{ __( 'Change opinion' ) }}</button>
    </div>
-   <div></div>
+   <div v-else></div>
   </div>
 
   <footer>

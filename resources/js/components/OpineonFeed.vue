@@ -15,13 +15,20 @@ export default {
 
  data() {
   return {
-   "opineon": this.opinion
+   "opineon": this.opinion,
+   "editing": false
   }
  },
 
  "computed": {
   "endpoint": function() {
    return '/opineon/'+this.opineon.id+'/comments';
+  },
+  "signedIn": function() {
+   return window.KALESKOP.signedIn;
+  },
+  "canEdit": function() {
+   return window.KALESKOP.user === this.opineon.author_id;
   }
  },
 
