@@ -18,13 +18,17 @@ export default {
    "opineon": this.opinion,
    "editing": false,
    "comments": [],
-   "commentSection": false
+   "commentSection": false,
+   "commentForm": false
   }
  },
 
  "computed": {
   "endpoint": function() {
    return '/opineon/'+this.opineon.id+'/comments';
+  },
+  "commentAction": function() {
+   return '/opineon/'+this.opineon.id+'/comment';
   },
   "signedIn": function() {
    return window.KALESKOP.signedIn;

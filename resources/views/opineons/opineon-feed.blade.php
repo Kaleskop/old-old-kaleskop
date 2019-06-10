@@ -32,14 +32,18 @@
  </div>
 
  <section v-if="commentSection">
-  <div></div>
+  <div v-if="signedIn" v-show="commentForm">
+   <comment-form v-bind:action="commentAction"></comment-form>
+  </div>
 
   <div>
    <header>
     <h4>{{ __( 'Comments' ) }}</h4>
 
-    <button type="button">{{ __( 'Cancel' ) }}</button>
-    <button type="button">{{ __( 'New' ) }}</button>
+    <div v-if="signedIn">
+     <button type="button" v-if="commentForm" v-on:click="commentForm = false">{{ __( 'Cancel' ) }}</button>
+     <button type="button" v-else v-on:click="commentForm = true">{{ __( 'New' ) }}</button>
+    </div>
    </header>
 
    <div>
