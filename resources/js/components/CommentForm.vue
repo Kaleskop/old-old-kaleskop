@@ -39,6 +39,8 @@ export default {
  "methods": {
   onSubmit() {
    this.form.post(this.action).then(comment => window.events.$emit('new-comment', comment));
+
+   window.events.$emit('flash', { "body": "New Comment!" });
   }
  }
 }
