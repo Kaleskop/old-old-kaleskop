@@ -11,6 +11,12 @@ window.Vue = require('vue');
 // - global event management
 window.events = new Vue();
 
+// - global flash message function
+window.flash = function(message) {
+ // emit a flash event on each call
+ window.events.$emit('flash', message);
+}
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
