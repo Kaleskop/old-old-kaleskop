@@ -40,7 +40,9 @@
     <button type="button">{{ __( 'New' ) }}</button>
    </header>
 
-   <div></div>
+   <div>
+    <opineon-comment v-for="comment in comments" v-bind:key="comment.id" v-bind:comment="comment"></opineon-comment>
+   </div>
   </div>
  </section>
 </article>

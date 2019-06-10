@@ -16,7 +16,8 @@ export default {
  data() {
   return {
    "opineon": this.opinion,
-   "editing": false
+   "editing": false,
+   "comments": []
   }
  },
 
