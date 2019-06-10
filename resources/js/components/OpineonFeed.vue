@@ -17,7 +17,8 @@ export default {
   return {
    "opineon": this.opinion,
    "editing": false,
-   "comments": []
+   "comments": [],
+   "commentSection": false
   }
  },
 
@@ -67,6 +68,16 @@ export default {
     window.events.$emit('flash', { "body": "New Opinion!" });
    } catch(err) {
     console.log('post new opinion fail: '+ err);
+   }
+  },
+  toggleCommentSection() {
+   if (this.commentSection) {
+    this.commentSection = false;
+    } else {
+    this.commentSection = true;
+
+    this.comments = [];
+    this.updateComments();
    }
   }
  }

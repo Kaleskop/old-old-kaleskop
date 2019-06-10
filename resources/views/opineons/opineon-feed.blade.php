@@ -9,7 +9,7 @@
    </div>
 
    <div v-if="editing">
-    <textarea></textarea>
+    <textarea v-model="opineon.body"></textarea>
     <button type="button">{{ __( 'Change opinion' ) }}</button>
    </div>
    <div v-else></div>
@@ -25,11 +25,13 @@
     </div>
    </div>
    
-   <div></div>
+   <div>
+    <button type="button" v-on:click="toggleCommentSection">@{{ opineon.comments_count }} comments</button>
+   </div>
   </footer>
  </div>
 
- <section>
+ <section v-if="commentSection">
   <div></div>
 
   <div>
