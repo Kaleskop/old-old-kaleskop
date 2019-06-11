@@ -1,4 +1,4 @@
-<opineon-feed inline-template>
+<opineon-feed action="{{ route( 'advs.express', $adv ) }}" v-bind:opinion="{{ $opinion }}" inline-template>
 
 <article>
  <div>
