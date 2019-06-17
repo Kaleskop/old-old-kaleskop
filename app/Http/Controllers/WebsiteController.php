@@ -34,6 +34,13 @@ class WebsiteController extends Controller {
   $opinions = $adv->opinions()->withCount( 'comments' )->get();
   $opineon = Auth::check() ? Auth::user()->opinionOn( $adv )->withCount( 'comments' ) : null;
 
+  if ( $opineon && !is_null( $opineon->first() ) ) {
+   $opinions->keyBy( 'id' );
+   $opinions = $opinions->reject(function( $item ) use ( $opineon ) {
+    return $item->id === $opineon->first()->id;
+   });
+  }
+
   return view( 'layouts.wrapper', [ 'page'=>'website.advs-page' ] )
    ->with( 'brand', $brand )
    ->with( 'adv', $adv )
