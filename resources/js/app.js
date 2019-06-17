@@ -8,6 +8,15 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+// - global event management
+window.events = new Vue();
+
+// - global flash message function
+window.flash = function(message) {
+ // emit a flash event on each call
+ window.events.$emit('flash', message);
+}
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -20,6 +29,7 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('video-player', require('./components/VideoPlayer.vue').default);
+Vue.component('flash-message', require('./components/FlashMessage.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
