@@ -16,5 +16,9 @@ class DatabaseSeeder extends Seeder {
   $this->call( BrandSeeder::class );
   $this->call( VideoSeeder::class );
   $this->call( PlanSeeder::class );
+  $this->call( ManifestoSeeder::class );
+  $this->call( SponsorSeeder::class );
+  $this->call( OpineonSeeder::class );
+  $this->call( CommentSeeder::class );
  }
 }
