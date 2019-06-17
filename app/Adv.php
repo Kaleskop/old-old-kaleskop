@@ -7,8 +7,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 use App\Traits\HasClicks;
 use Agpretto\Opineon\Traits\HasOpinions;
+use Agpretto\Opineon\Contracts\SubjectInterface;
 
-class Adv extends Model {
+class Adv extends Model implements SubjectInterface {
 
  use SoftDeletes, HasClicks, HasOpinions;
 
