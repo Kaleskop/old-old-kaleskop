@@ -20,6 +20,10 @@ class OpineonController extends Controller {
 
   $comment = $request->user()->comment( $request->all(), $opinion );
 
+  if ( $request->wantsJson() ) {
+   return $comment;
+  }
+
   return back();
  }
 }
