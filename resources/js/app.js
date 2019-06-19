@@ -30,6 +30,7 @@ window.flash = function(message) {
 
 Vue.component('video-player', require('./components/VideoPlayer.vue').default);
 Vue.component('flash-message', require('./components/FlashMessage.vue').default);
+Vue.component('opineon-comment', require('./components/OpineonComment.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
