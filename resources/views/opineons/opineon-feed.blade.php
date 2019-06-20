@@ -17,7 +17,7 @@
 
   <footer>
    <div>
-    <figure></figure>
+    <figure class="w-8 h-8 mr-2 rounded-full bg-kaleskop-blue"></figure>
     
     <div>
      <p>{{ $opinion->author->name }}</p>
