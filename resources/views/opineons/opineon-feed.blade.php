@@ -38,7 +38,7 @@
 
   <div>
    <header>
-    <h4>{{ __( 'Comments' ) }}</h4>
+    <h4 class="font-medium text-sm text-gray-800 uppercase">{{ __( 'Comments' ) }}</h4>
 
     <div v-if="signedIn">
      <button type="button" class="appearance-none outline-none cursor-pointer select-none block leading-snug p-2 border border-transparent font-medium text-center focus:shadow-md" v-if="commentForm" v-on:click="commentForm = false">{{ __( 'Cancel' ) }}</button>
