@@ -32,6 +32,7 @@ Vue.component('video-player', require('./components/VideoPlayer.vue').default);
 Vue.component('flash-message', require('./components/FlashMessage.vue').default);
 Vue.component('opineon-comment', require('./components/OpineonComment.vue').default);
 Vue.component('comment-form', require('./components/CommentForm.vue').default);
+Vue.component('opineon-feed', require('./components/OpineonFeed.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
