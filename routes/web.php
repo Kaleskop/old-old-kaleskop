@@ -54,6 +54,7 @@ Route::get( '/advs/{adv}/sponsor', 'AdvsController@sponsor' )->name( 'advs.spons
 
 // - opineon
 Route::post( '/opineon/{opinion}/comment', 'OpineonController@comment' )->name( 'opineon.comment' );
+Route::get( '/opineon/{opinion}/comments', 'OpineonController@comments' )->name( 'opineon.comments' );
 
 // - brands
 Route::post( '/brands/store', 'BrandsController@store' )->name( 'brands.store' );

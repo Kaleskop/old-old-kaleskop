@@ -60,6 +60,10 @@ class AdvsController extends Controller {
 
   $opinion = $request->user()->express( $request->all(), $adv );
 
+  if ( $request->wantsJson() ) {
+   return $opinion->withCount( 'comments' )->get()->last();
+  }
+
   return back();
  }
 
