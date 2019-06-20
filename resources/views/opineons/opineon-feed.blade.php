@@ -46,7 +46,7 @@
     </div>
    </header>
 
-   <div>
+   <div class="flex flex-col">
     <opineon-comment v-for="comment in comments" v-bind:key="comment.id" v-bind:comment="comment"></opineon-comment>
    </div>
   </div>
