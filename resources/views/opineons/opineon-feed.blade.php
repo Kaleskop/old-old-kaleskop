@@ -37,7 +37,7 @@
   </div>
 
   <div>
-   <header>
+   <header class="flex justify-between items-center">
     <h4 class="font-medium text-sm text-gray-800 uppercase">{{ __( 'Comments' ) }}</h4>
 
     <div v-if="signedIn">
