@@ -4,8 +4,8 @@
  <div>
   <div>
    <div v-if="signedIn && canEdit">
-    <button type="button" v-if="editing" v-on:click="editing = false">{{ __( 'Cancel' ) }}</button>
-    <button type="button" v-else v-on:click="editing = true">{{ __( 'Edit' ) }}</button>
+    <button type="button" class="appearance-none outline-none cursor-pointer select-none block leading-snug p-2 border border-transparent font-medium text-center focus:shadow-md" v-if="editing" v-on:click="editing = false">{{ __( 'Cancel' ) }}</button>
+    <button type="button" class="appearance-none outline-none cursor-pointer select-none block leading-snug p-2 border border-transparent font-medium text-center focus:shadow-md" v-else v-on:click="editing = true">{{ __( 'Edit' ) }}</button>
    </div>
 
    <div v-if="editing">
@@ -41,8 +41,8 @@
     <h4>{{ __( 'Comments' ) }}</h4>
 
     <div v-if="signedIn">
-     <button type="button" v-if="commentForm" v-on:click="commentForm = false">{{ __( 'Cancel' ) }}</button>
-     <button type="button" v-else v-on:click="commentForm = true">{{ __( 'New' ) }}</button>
+     <button type="button" class="appearance-none outline-none cursor-pointer select-none block leading-snug p-2 border border-transparent font-medium text-center focus:shadow-md" v-if="commentForm" v-on:click="commentForm = false">{{ __( 'Cancel' ) }}</button>
+     <button type="button" class="appearance-none outline-none cursor-pointer select-none block leading-snug p-2 border border-transparent font-medium text-center focus:shadow-md" v-else v-on:click="commentForm = true">{{ __( 'New' ) }}</button>
     </div>
    </header>
 
