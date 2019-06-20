@@ -1,6 +1,10 @@
 <opineon-feed action="{{ route( 'advs.express', $adv ) }}" v-bind:opinion="{{ $opinion }}" inline-template>
 
+<<<<<<< HEAD
 <article class="mb-4 border border-kaleskop-blue hover:bg-grey-100">
+=======
+<article class="mb-4 hover:bg-grey-100">
+>>>>>>> f16b0502... style comment form wrapper on opineons opineon-feed
  <div>
   <div class="relative p-2">
    <div v-if="signedIn && canEdit">
@@ -32,7 +36,7 @@
  </div>
 
  <section v-if="commentSection">
-  <div class="p-4" v-if="signedIn" v-show="commentForm">
+  <div class="p-4 bg-grey-200" v-if="signedIn" v-show="commentForm">
    <comment-form v-bind:action="commentAction" v-on:new-comment="onNewComment"></comment-form>
   </div>
 
@@ -46,7 +50,7 @@
     </div>
    </header>
 
-   <div class="flex flex-col border-l border-grey-200">
+   <div class="flex flex-col">
     <opineon-comment v-for="comment in comments" v-bind:key="comment.id" v-bind:comment="comment"></opineon-comment>
    </div>
   </div>
