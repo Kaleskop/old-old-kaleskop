@@ -36,7 +36,7 @@
    <comment-form v-bind:action="commentAction" v-on:new-comment="onNewComment"></comment-form>
   </div>
 
-  <div>
+  <div class="py-4 pl-6 pr-2">
    <header class="flex justify-between items-center">
     <h4 class="font-medium text-sm text-gray-800 uppercase">{{ __( 'Comments' ) }}</h4>
 
