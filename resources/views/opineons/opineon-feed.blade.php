@@ -2,7 +2,7 @@
 
 <article class="mb-4 border border-kaleskop-blue hover:bg-grey-100">
  <div>
-  <div>
+  <div class="relative p-2">
    <div v-if="signedIn && canEdit">
     <button type="button" class="appearance-none outline-none cursor-pointer select-none block leading-snug p-2 border border-transparent font-medium text-center focus:shadow-md" v-if="editing" v-on:click="editing = false">{{ __( 'Cancel' ) }}</button>
     <button type="button" class="appearance-none outline-none cursor-pointer select-none block leading-snug p-2 border border-transparent font-medium text-center focus:shadow-md" v-else v-on:click="editing = true">{{ __( 'Edit' ) }}</button>
