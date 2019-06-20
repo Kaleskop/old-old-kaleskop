@@ -33,7 +33,7 @@
 
  <section v-if="commentSection">
   <div v-if="signedIn" v-show="commentForm">
-   <comment-form v-bind:action="commentAction"></comment-form>
+   <comment-form v-bind:action="commentAction" v-on:new-comment="onNewComment"></comment-form>
   </div>
 
   <div>
