@@ -12,7 +12,7 @@
     <textarea class="appearance-none outline-none cursor-text block resize-y w-full leading-snug py-1 px-2 border border-transparent bg-white shadow focus:shadow-md" v-model="opineon.body"></textarea>
     <button type="button" class="appearance-none outline-none cursor-pointer select-none block leading-snug p-2 ml-auto border border-transparent font-medium text-center focus:shadow-md" v-on:click="newOpinion">{{ __( 'Change opinion' ) }}</button>
    </div>
-   <div v-else>@{{ opineon.body }}</div>
+   <div class="p-2" v-else>@{{ opineon.body }}</div>
   </div>
 
   <footer class="p-2 flex justify-between items-center">
