@@ -26,7 +26,7 @@
    </div>
    
    <div>
-    <button type="button" v-on:click="toggleCommentSection">@{{ opineon.comments_count }} comments</button>
+    <button type="button" class="appearance-none outline-none cursor-pointer select-none block leading-snug p-2 border border-transparent font-medium text-center underline" v-on:click="toggleCommentSection">@{{ opineon.comments_count }} comments</button>
    </div>
   </footer>
  </div>
