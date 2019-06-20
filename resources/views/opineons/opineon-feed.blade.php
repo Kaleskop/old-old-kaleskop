@@ -1,10 +1,6 @@
 <opineon-feed action="{{ route( 'advs.express', $adv ) }}" v-bind:opinion="{{ $opinion }}" inline-template>
 
-<<<<<<< HEAD
-<article class="mb-4 border border-kaleskop-blue hover:bg-grey-100">
-=======
-<article class="mb-4 hover:bg-grey-100">
->>>>>>> f16b0502... style comment form wrapper on opineons opineon-feed
+<article class="mb-4 border border-transparent hover:bg-grey-100" v-bind:class="[ canEdit ? 'border-kaleskop-blue' : '' ]">
  <div>
   <div class="relative p-2">
    <div v-if="signedIn && canEdit">
