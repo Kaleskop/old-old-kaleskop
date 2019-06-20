@@ -16,10 +16,10 @@
   </div>
 
   <footer class="p-2 flex justify-between items-center">
-   <div>
+   <div class="flex items-center">
     <figure class="w-8 h-8 mr-2 rounded-full bg-kaleskop-blue"></figure>
     
-    <div>
+    <div class="text-sm">
      <p>{{ $opinion->author->name }}</p>
      <p>@{{ opineon.created_at }}</p>
     </div>
