@@ -1,6 +1,6 @@
 <opineon-feed action="{{ route( 'advs.express', $adv ) }}" v-bind:opinion="{{ $opinion }}" inline-template>
 
-<article>
+<article class="mb-4 border border-kaleskop-blue hover:bg-grey-100">
  <div>
   <div>
    <div v-if="signedIn && canEdit">
