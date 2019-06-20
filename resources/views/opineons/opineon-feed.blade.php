@@ -15,7 +15,7 @@
    <div v-else>@{{ opineon.body }}</div>
   </div>
 
-  <footer>
+  <footer class="p-2 flex justify-between items-center">
    <div>
     <figure class="w-8 h-8 mr-2 rounded-full bg-kaleskop-blue"></figure>
     
