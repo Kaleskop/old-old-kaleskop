@@ -7,16 +7,16 @@
   <div>
    <label class="block p-2 font-semibold">{{ __( 'Choose plan' ) }}</label>
 
-   <div>
+   <div class="flex flex-col md:flex-row">
     @forelse( $plans as $plan )
-    <div>
-     <div>
-      <input type="radio" name="plan" id="{{ $plan->plan_id }}" value="{{ $plan->plan_id }}" />
-      <label for="{{ $plan->plan_id }}">
-       <span>{{ $plan->price }}</span>
+    <div class="plan w-full mb-8 md:mx-4 px-4 pt-5 pb-6 md:flex-1 border border-transparent rounded shadow-lg bg-white hover:border-kaleskop-green">
+     <div class="relative flex flex-col text-center">
+      <input type="radio" name="plan" id="{{ $plan->plan_id }}" class="hidden" value="{{ $plan->plan_id }}" />
+      <label for="{{ $plan->plan_id }}" class="cursor-pointer mb-2 py-6">
+       <span class="leading-none font-semibold text-5xl">{{ $plan->price }}</span>
       </label>
-      <span>{{ $plan->name }}</span>
-      <div>{{ Illuminate\Mail\Markdown::parse( $plan->description ) }}</div>
+      <span class="font-bold uppercase">{{ $plan->name }}</span>
+      <div class="leading-relaxed text-sm">{{ Illuminate\Mail\Markdown::parse( $plan->description ) }}</div>
      </div>
     </div>
 
