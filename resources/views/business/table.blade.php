@@ -14,7 +14,7 @@
    <td>{{ $invoice->total() }}</td>
    <td>
     <div>
-     <a href="" class="underline">{{ __( 'Download' ) }}</a>
+     <a href="{{ route( 'business.invoice', $invoice->id ) }}" target="_blank" class="underline">{{ __( 'Download' ) }}</a>
     </div>
    </td>
   </tr>
