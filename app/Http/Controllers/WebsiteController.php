@@ -24,7 +24,7 @@ class WebsiteController extends Controller {
  }
 
  public function channels() {
-  $advs = Adv::latest()->get();
+  $advs = Adv::has( 'brands' )->latest()->get();
 
   return view( 'layouts.wrapper', [ 'page'=>'website.channels-page' ] )
    ->with( 'advs', $advs );
