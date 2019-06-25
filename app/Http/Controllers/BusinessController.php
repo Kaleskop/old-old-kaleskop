@@ -49,4 +49,12 @@ class BusinessController extends Controller {
    ->with( 'business', $business )
    ->with( 'plans', $plans );
  }
+
+ public function invoice( Request $request, $invoice ) {
+  $data = [
+   'vendor' => 'Worldtimeline di Pretto Andrea Giuseppe',
+   'product' => 'Kaleskop Advertisement Service'
+  ];
+  return $request->user()->business->downloadInvoice( $invoice, $data );
+ }
 }

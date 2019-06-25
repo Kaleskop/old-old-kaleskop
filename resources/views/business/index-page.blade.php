@@ -5,6 +5,9 @@
  <header class="mb-4">
   <h2 class="mb-2 font-medium text-3xl">{{ $business->name }}</h2>
  </header>
+
+ @include( 'business.table', [ 'invoices'=>$business->invoices() ] )
+
 </section>
 
 @endsection
