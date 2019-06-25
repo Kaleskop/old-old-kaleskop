@@ -51,6 +51,10 @@ class BusinessController extends Controller {
  }
 
  public function invoice( Request $request, $invoice ) {
-  return $request->user()->business->downloadInvoice( $invoice );
+  $data = [
+   'vendor' => 'Worldtimeline di Pretto Andrea Giuseppe',
+   'product' => 'Kaleskop Advertisement Service'
+  ];
+  return $request->user()->business->downloadInvoice( $invoice, $data );
  }
 }
