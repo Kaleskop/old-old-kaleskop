@@ -1,4 +1,4 @@
-<div class="relative w-32 sm:w-48 md:w-56">
+<div class="relative mb-4 w-32 sm:w-48 md:w-56">
  <figure class="tile relative">
   <img src="{{ asset( 'storage/'.$brand->logo_path ) }}" />
 

@@ -16,3 +16,12 @@
  @apply bg-kaleskop-gold-200;
 }
 
+.tile > figcaption {
+ transition: opacity .2s;
+}
+.tile > figcaption {
+ @apply opacity-0;
+}
+.tile:hover > figcaption {
+ @apply opacity-100;
+}
