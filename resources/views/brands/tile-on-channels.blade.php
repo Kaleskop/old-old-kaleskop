@@ -1,11 +1,7 @@
-<div class="relative w-32 sm:w-48 md:w-56">
- <figure>
+<div class="relative mb-4 w-32 sm:w-48 md:w-56">
+ <figure class="tile relative">
   <img src="{{ asset( 'storage/'.$brand->logo_path ) }}" />
+
+  <figcaption class="absolute inset-x-0 bottom-0 p-2 text-sm uppercase bg-black text-white">{{ $brand->name }}</figcaption>
  </figure>
-
- <article>
-  <h4>{{ $brand->name }}</h4>
-
-  <p>{{ Illuminate\Mail\Markdown::parse( $brand->description ) }}</p>
- </article>
 </div>
